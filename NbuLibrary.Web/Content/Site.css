@@ -1,0 +1,70 @@
+﻿body {
+}
+
+.data-field {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.logo {
+    height: 30px;
+}
+
+a.disabled-link,
+a.disabled-link:visited,
+a.disabled-link:active,
+a.disabled-link:hover {
+    background-color: #fff !important;
+    color: #fff !important;
+}
+
+.filter-label {
+    padding-bottom: 10px;
+    padding-right: 10px;
+    text-align: right;
+}
+
+.filters {
+    width: 400px;
+    padding: 30px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    color: inherit;
+    border: 1px solid #eeeeee;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+    .filters .btn {
+        float: right;
+    }
+
+#loader {
+    border: 2px solid #eee;
+    background-color: white;
+    z-index: 999;
+    padding: 30px;
+    width: 200px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+.modal-body {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+.ssrs-report-frame{
+    border:0px;
+}
+
+.grey{
+    color:#ccc
+}

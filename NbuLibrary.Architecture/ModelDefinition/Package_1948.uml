@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="999745f9-b004-4b18-87e6-4c1dd38ba51b"
+  name="tmp"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="56314191-7acb-4e86-b091-b2f064ce35bd"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DNbuLibrary.Core.Services.tmp"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="b16f9160-e710-49cf-a176-7d9916f9d29c"
+        name="EntityDelete"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="0d736282-a91c-4a15-a20c-1f03ae1edba0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FF:%2FDocuments%2FVisual Studio 2012%2FProjects%2FNbuLibrary%2FNbuLibrary.Core.Services%2Fbin%2FDebug%2FNbuLibrary.Core.Services.dll&quot; Namespace%3DNbuLibrary.Core.Services.tmp Type%3DEntityDelete"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="04a17542-3dea-47b7-9ed0-4095ba4c9214"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="72ad09cc-d690-492a-9282-0cde955928c6">
+                <propertyInstance
+                  Id="e9aa11dd-d207-4502-bfbb-e628e3736e0c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="29118079-c893-44fd-9d70-067d573aa936">
+                <propertyInstance
+                  Id="d695f76f-9b0e-44a2-a3e3-0cb14a9792ab"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d24b1a55-0eed-4931-91d5-e8049784769f">
+                <propertyInstance
+                  Id="22c945ed-4e3f-41c5-be12-6fc87fb3efc1"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2b2d30dc-8273-42fd-9ab3-c66a4889de42">
+                <propertyInstance
+                  Id="95ab6bb2-c24e-48df-9a7a-48f75908f783"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="16a0b995-8ced-444d-b6aa-413428a6ed1c">
+                <propertyInstance
+                  Id="296f2273-bde6-4d26-81bf-f82d9ba7cdaa"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="731a2881-c060-4d06-a9b7-519c0da8d347"
+            isSubstitutable="false">
+            <classMoniker
+              Id="5e2cb46b-cf62-4dcd-bfca-0ca023a29752"
+              LastKnownName="EntityOperation"
+              LastKnownLocation="Package_1948.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5e2cb46b-cf62-4dcd-bfca-0ca023a29752"
+        name="EntityOperation"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e02d972c-be7c-409c-a9aa-07aa5b69e514"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FF:%2FDocuments%2FVisual Studio 2012%2FProjects%2FNbuLibrary%2FNbuLibrary.Core.Services%2Fbin%2FDebug%2FNbuLibrary.Core.Services.dll&quot; Namespace%3DNbuLibrary.Core.Services.tmp Type%3DEntityOperation"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="dc1e09e9-6cc4-40b2-b7e7-7567fc89d7ea"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="abc5fedf-bbfe-47f1-9306-987c484b0748">
+                <propertyInstance
+                  Id="5a90f98c-a8b3-4972-b8ea-823ba0159ff2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="01770c58-998f-46be-aca5-83b9aae44e54">
+                <propertyInstance
+                  Id="cc59f74b-6996-482e-b053-60be829cc091"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="54b8e7e3-f1aa-4d82-ac61-a50255ba36f2">
+                <propertyInstance
+                  Id="87ac96e5-b376-4ce7-9447-2583b522471d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="16063c76-9169-4e97-9f41-c057fffd2b63">
+                <propertyInstance
+                  Id="7bb8b8ac-c04f-4b99-b535-de82c736bf3e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c1c8b2bd-2693-4afd-b1e3-78e3509af9b7">
+                <propertyInstance
+                  Id="daabbc3e-bb9a-4221-a73a-87ffcf719ea5"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

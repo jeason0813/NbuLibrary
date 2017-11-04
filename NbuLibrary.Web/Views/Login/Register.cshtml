@@ -1,0 +1,26 @@
+﻿@model NbuLibrary.Web.Models.RegisterGroupModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Login/_Login.cshtml";
+    var userGroups = new SelectList(Model.AvailableGroups, "Id", "Name");
+    
+}
+
+<h2>Регистрация</h2>
+<h4>Моля, изберете потребителска група:</h4>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <div class="editor-field">
+        @Html.DropDownListFor(model => model.UserGroup, userGroups, "Изберете...")
+        @Html.ValidationMessageFor(model => model.UserGroup)
+    </div>
+    <div>
+        @Html.ActionLink("Назад", "Index", null, new { @class = "btn btn-link" })
+        <input type="submit" class="btn btn-primary" value="Продължи" />
+    </div>
+    
+}
+

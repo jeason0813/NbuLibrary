@@ -1,0 +1,40 @@
+﻿<h3 data-bind="text: Title"></h3>
+<h4 data-bind="res: 'heading_mymagazines_issues'"></h4>
+
+<!-- ko if: LoadedDef() && Loaded() -->
+<div data-bind="template: { name: 'Filters', data: Filters }"></div>
+
+
+<!-- ko if: Items().length -->
+<table class="table table-striped">
+    <thead>
+        <tr data-bind="template: { name: 'GridHeaders' }">
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr data-bind="css: { warning: !Data.Sent() }">
+            <td>
+                <div class="btn-group">
+                    <button class="btn" data-bind="click: $root.edit"><i class=" icon-pencil"></i>&nbsp;<span data-bind="    res: 'btn_edit'"></span></button>
+                    <button class="btn" data-bind="click: $root.send, disable: Data.Sent"><i class=" icon-share-alt"></i>&nbsp;<span data-bind="    res: 'btn_send'"></span></button>
+                    <a class="btn" data-bind="attr: { href: '#/notif/related/Issue/Notification/' + Id() }"><i class=" icon-envelope"></i>&nbsp;<span data-bind="    res: 'btn_view_notifications'"></span></a>
+                </div>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+
+<!-- ko template: {name : 'GridPaging'} -->
+<!-- /ko -->
+<div class="btn-group">
+    <button class="btn btn-success" data-bind="click: create"><i class="icon-plus"></i>&nbsp;<span data-bind="    res: 'btn_add_issue'"></span></button>
+</div>
+
+<!-- /ko -->

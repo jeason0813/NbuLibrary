@@ -1,0 +1,45 @@
+﻿<table class="table table-bordered">
+    <caption data-bind="res: 'uitexts_table_caption'">
+    </caption>
+    <thead>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="width: 50px"></td>
+            <td>
+                <div class="input-prepend input-append">
+                    <span class="add-on"><i class="icon-search"></i></span>
+                    <input type="text" class="input-medium search-query" data-bind="value: Filter, valueUpdate: 'afterkeyup'">
+                </div>
+
+            </td>
+            <td></td>
+        </tr>
+
+        <!-- ko if: filteredUITexts().length == 0 -->
+        <tr>
+            <td></td>
+            <td>Does not exist.</td>
+            <td></td>
+        </tr>
+        <!-- /ko -->
+        <!-- ko foreach: filteredUITexts -->
+        <tr data-bind="css: { 'warning': Dirty }">
+            <td>
+                <div class="btn-group">
+                    <button class="btn" data-bind="enable: Dirty, click: $parent.set">Set</button>
+                    <button class="btn" data-bind="click: $parent.remove"><i class="icon-trash"></i>Delete</button></div>
+            </td>
+            <td data-bind="text: Key" style="width: 33%;"></td>
+            <td style="width: 66%">
+                <input type="text" data-bind="value: Value" style="width: 90%" />
+            </td>
+        </tr>
+        <!-- /ko -->
+        <tr>
+            <td></td>
+            <td><a href="#" data-bind="click: add">Create</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

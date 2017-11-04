@@ -1,0 +1,32 @@
+﻿<h3 data-bind="res: 'heading_account_usergroups'"></h3>
+
+<!-- ko if: LoadedDef() && Loaded() -->
+
+<!-- ko if: Items().length -->
+<table class="table table-striped">
+    <thead>
+        <tr data-bind="template: { name: 'GridHeaders' }">
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr>
+            <td>
+                <div class="btn-group">
+                    <a class="btn" data-bind="attr: { href: '#/account/usergroups/' + Id() }"><i class="icon-list-alt"></i>&nbsp;<span data-bind="    res: 'btn_open'"></span></a>
+                    <a class="btn btn-danger" data-bind="click: $root.remove"><i class="icon-trash"></i>&nbsp;<span data-bind="    res: 'btn_remove'"></span></a>
+                </div>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+
+<a class="btn btn-success" href="#/account/usergroups/new/"><i class="icon-plus"></i>&nbsp;<span data-bind="    res: 'btn_create'"></span></a>
+
+<!-- /ko -->

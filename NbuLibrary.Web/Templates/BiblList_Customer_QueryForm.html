@@ -1,0 +1,10 @@
+﻿<h3 data-bind="res: 'heading_bibllist_bibliographiclistquery'"></h3>
+
+<div data-bind="template: { name: 'GeneralForm' }">
+</div>
+
+<div style="margin-top: 1em;">
+    <a href="#/bibllist/queries" class="btn" data-bind="res: 'btn_cancel'"></a>
+    <button class="btn btn-primary" data-bind="res: 'btn_create_query', click: save, enable: IsDirty"></button>
+</div>
+

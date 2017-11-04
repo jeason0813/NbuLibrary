@@ -1,0 +1,66 @@
+﻿.fileicon {
+    width: 50px;
+    height: 50px;
+    background-image: url(images/fileicons.png);
+    background-position: -225px -505px; /*unknown*/
+}
+
+.fileicon-png {
+    background-position: -335px -340px;
+}
+
+.fileicon-bmp {
+    background-position: -280px -340px;
+}
+
+.fileicon-gif {
+    background-position: -5px -340px;
+}
+
+.fileicon-jpg {
+    background-position: -450px -395px;
+}
+
+.fileicon-rtf {
+    background-position: -5px -5px;
+}
+
+.fileicon-pptx {
+    background-position: -335px -60px;
+}
+
+.fileicon-docx {
+    background-position: -395px -60px;
+}
+
+.fileicon-doc {
+    background-position: -505px -340px;
+}
+
+.fileicon-rar {
+    background-position: -395px -115px;
+}
+
+.fileicon-xls {
+    background-position: -505px -115px;
+}
+
+.fileicon-xlsx {
+    background-position: -170px -340px;
+}
+
+.fileicon-pdf {
+    background-position: -5px -285px;
+}
+
+.fileicon-ppt {
+    background-position: -115px -285px;
+}
+
+.fileicon-txt {
+    background-position: -170px -285px;
+}
+
+.fileicon-zip {
+    background-position: -335px -285px;
+}

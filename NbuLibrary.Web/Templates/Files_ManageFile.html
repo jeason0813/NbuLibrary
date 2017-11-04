@@ -1,0 +1,43 @@
+﻿<!-- ko if: Loaded -->
+<div>
+    <div>
+        <div class="span1">
+            <div data-bind="attr: { class: ko.fileiconFor(File.Data.Name() + File.Data.Extension()) }"></div>
+        </div>
+        <div class="span8">
+            <input type="text" data-bind="value: File.Data.Name" />
+        </div>
+    </div>
+    <div class="span8">
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <button data-bind="click: grant" class="btn btn-primary"><i class="icon-plus">&nbsp;</i>&nbsp;Grant Permission</button>
+                <button class="btn"><i class="icon-search">&nbsp;</i>&nbsp;See all relations</button>
+            </div>
+        </div>
+        <table class="table table-hover">
+            <thead></thead>
+            <tbody data-bind="foreach: File.RelationsData.User_Access">
+                <tr data-bind="css: { warning: HasChanges() }">
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-danger" data-bind="disable: Data.Type() == 1, click: $root.revoke"><i class="icon-minus"></i>&nbsp;Revoke</button>
+                            <button class="btn btn-warning" data-bind="enable: HasChanges(), click: $root.update"><i class="icon-download-alt"></i>&nbsp;Update</button>
+                        </div>
+                    </td>
+                    <td><a data-bind="text: Entity.Data.FullName, attr: { href: '#/account/users/' + Entity.Id }"></a></td>
+                    <td data-bind="enumlist: { disable: Data.Type() == 1, value: Data.Type, enumClass: 'NbuLibrary.Core.Domain.FileAccessType, NbuLibrary.Core.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' }"></td>
+                    <td>
+                        <!-- ko if: Data.Type() == 3 -->
+                        <div type="datetime" data-bind="datepicker: { value: $data.Data.Expire }"></div>
+                        <!-- /ko -->
+                        <!-- ko if: Data.Type() == 4-->
+                        <span data-bind="text: Data.Token"></span>
+                        <!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- /ko -->

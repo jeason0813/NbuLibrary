@@ -1,0 +1,76 @@
+﻿@using SquishIt.Framework;
+@model string
+@{
+    ViewBag.Title = "OpenAttachment";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link href="~/Scripts/Select/select2.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/Bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/BootstrapModal/css/bootstrap-modal.css" rel="stylesheet" />
+    <link href="~/Scripts/Datepicker/datepicker.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/FileUpload/css/jquery.fileupload-ui-noscript.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/FileUpload/css/jquery.fileupload-ui.css" rel="stylesheet" />
+    <link href="~/Content/fileicons.css" rel="stylesheet" />
+
+    @*    @Html.Raw(Bundle.Css()
+    .Add("/Scripts/Select/select2.css")
+    .Add("/Scripts/lib/Bootstrap/css/bootstrap.min.css")
+    .Add("/Scripts/lib/Bootstrap/css/bootstrap-responsive.min.css")
+    .Add("/Scripts/lib/BootstrapModal/css/bootstrap-modal.css")
+    .Add("/Scripts/Datepicker/datepicker.css")
+    .Add("/Scripts/lib/FileUpload/css/jquery.fileupload-ui-noscript.css")
+    .Add("/Scripts/lib/FileUpload/css/jquery.fileupload-ui.css")
+    .Add("/Content/fileicons.css")
+    .ForceRelease()
+    .Render("/Content/cssui_combined_#.css"))*@
+
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>Прикачен файл</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#/">
+                <img src="~/Content/images/Nbu%20Logo%20DarkGray.png" class="logo" />
+                NBU Library</a>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <nav id="mainMenu"class="nav-collapse collapse">
+                <ul class="nav" role="navigation">
+                    <li><a href="/#/">Към системата</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <article id="viewport" class="container">
+        <p><strong>Ако свалянето на файла не започне авоматично, <a id="download_attachment_link" href="@Model">натиснете тук</a>.</strong></p>
+        <p><i>За да продължите да работите със системата, отидете на <a href="/#/">началната страница</a>.</i></p>
+    </article>
+   
+    @{
+        var jsBundle = Bundle.JavaScript()
+    .Add("~/Scripts/jquery-1.9.1.min.js")
+    .Add("~/Scripts/lib/Bootstrap/js/bootstrap.min.js");
+        
+    }
+    
+    @Html.Raw(jsBundle.Render("~/Content/jsui__openattachment_combined_#.js"))
+    <script>
+        $(function () {
+            var url = $('#download_attachment_link').attr('href')
+            window.location = url;
+        });
+    </script>
+</body>
+</html>

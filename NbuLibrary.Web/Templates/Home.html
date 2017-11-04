@@ -1,0 +1,24 @@
+﻿<h3 data-bind="res: 'welcome_message'"></h3>
+<p>
+    Добре дошли в системата за електронни услуги на библиотеката на Нов български университет!
+</p>
+<p>
+    Информация за видовете услуги може да намерите в <a href="http://www.nbu.bg/bg/library/uslugi/bibliotechno-informacionni-uslugi" target="_blank">сайта на библиотеката</a>.
+</p>
+<p>
+    За допълнителна информация:
+    <ul>
+        <li>имейл: library@nbu.bg</li>
+        <li>тел.: 02/8110296</li>
+        <li>скайп: NBU_Biblioteka</li>
+    </ul>
+</p>
+<div data-bind="foreach: Messages">
+    <div class="alert">
+        <!-- ko if:Icon -->
+        <i data-bind="attr: { class: 'icon-' + Icon }"></i>
+        <!-- /ko -->
+        <strong data-bind="text: Title"></strong>&nbsp;<span data-bind="    html: Message"></span>
+        <button type="button" class="close" data-dismiss="alert" data-bind="click: $root.dismiss">&times;</button>
+    </div>
+</div>

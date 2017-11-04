@@ -1,0 +1,32 @@
+﻿<select data-bind="options: Fields, optionsText: 'Name', value: Selected, optionsCaption:'Choose property'">
+</select>
+<div data-bind="if: !!Selected()">
+
+    <select data-bind="options: FieldTypes, optionsText: 'Name', value: SelectedType">
+    </select>
+
+</div>
+
+<div data-bind="if: !!SelectedType()">
+    <label>Label</label>
+    <input type="text" data-bind="value : Result.Label" />
+    <label>Order</label>
+    <input type="text" data-bind="value : Result.Order" />
+
+    <label>Required</label>
+    <input type="checkbox" data-bind="checked : Result.Required, enable : !!Selected().Nullable" />
+
+    <!-- ko if: SelectedType().Value == 0 -->
+    @*Textbox*@
+            <label>MinLength</label>
+    <input type="text" data-bind="value : Result.MinLength" />
+    <label>MaxLength</label>
+    <input type="text" data-bind="value : Result.MaxLength" />
+    <label>Multiline</label>
+    <input type="checkbox" data-bind="checked : Result.Multiline" />
+    <!-- /ko -->
+
+    @*<span data-bind="text: Result.Property"></span>
+    <span data-bind="text: Result.Label"></span>
+    <span data-bind="text: Result.Type"></span>*@
+</div>

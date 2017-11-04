@@ -1,0 +1,92 @@
+﻿@model NbuLibrary.Web.Models.RegisterExternalViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "_Login.cshtml";
+}
+
+<h3>Регистрация в "@Model.UserGroupName"</h3>
+
+@using (Html.BeginForm("RegisterExternal", "Login"))
+{
+    @Html.HiddenFor(model => model.UserGroup)
+    @Html.HiddenFor(model => model.UserGroupName)
+    
+    <div class="alert alert-info">
+        Полетата, маркирани с *, са задължителни.
+    </div>
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Потребител</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email, new { autocomplete = "off" })
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.Password, new { autocomplete = "off" })
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConfirmPassword)
+        </div>
+        <div class="editor-field">
+            @Html.PasswordFor(model => model.ConfirmPassword, new { autocomplete = "off" })
+            @Html.ValidationMessageFor(model => model.ConfirmPassword)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MiddleName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MiddleName)
+            @Html.ValidationMessageFor(model => model.MiddleName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CardNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CardNumber)
+            @Html.ValidationMessageFor(model => model.CardNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PhoneNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PhoneNumber)
+            @Html.ValidationMessageFor(model => model.PhoneNumber)
+        </div>
+
+        <div>
+            @Html.ActionLink("Назад", "Register", null, new { @class = "btn btn-link" })
+            <input type="submit" class="btn btn-primary" value="Регистрирай се" />
+        </div>
+    </fieldset>
+}

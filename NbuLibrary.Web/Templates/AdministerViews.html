@@ -1,0 +1,14 @@
+﻿
+
+<table class="table table-bordered" data-bind="if: Loaded">
+   <thead>
+
+   </thead>
+    <tbody data-bind="foreach: Views">
+        <tr>
+            <td><a data-bind="text: Name, attr: { href: '#/views/' + Name}"></a></td>
+            <td data-bind="text: Entity"></td>
+            <td data-bind="text: Type"></td>
+        </tr>        
+    </tbody>
+</table>

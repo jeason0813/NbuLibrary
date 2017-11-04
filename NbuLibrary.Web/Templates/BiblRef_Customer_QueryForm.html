@@ -1,0 +1,31 @@
+﻿<h3 data-bind="res: 'heading_biblref_new_bibliographic_query'"></h3>
+
+<!-- ko if: !HasBibliography() -->
+<h4 data-bind="res: 'title_biblref_choose_bibliography'"></h4>
+<div class="btn-group">
+    <button class="btn btn-success" data-bind="click: createBibl">
+        <i class="icon-plus"></i>&nbsp;
+    <span data-bind="res: 'btn_new_bibliography'"></span>
+    </button>
+    <button class="btn btn-primary" data-bind="click: pickBibl">
+        <i class="icon-search"></i>&nbsp;
+    <span data-bind="res: 'btn_existing_bibliography'"></span>
+    </button>
+</div>
+<!-- /ko -->
+<!-- ko if: HasBibliography -->
+
+<div>
+    <label data-bind="res: 'lbl_biblref_bibliographyselected'"></label>
+    <input class="input-xxlarge" type="text" data-bind="value: Subject" disabled />
+</div>
+
+<div data-bind="template: { name: 'GeneralForm' }">
+</div>
+
+<!-- /ko -->
+<div style="margin-top: 1em;">
+    <a href="#/biblref/queries" class="btn" data-bind="res: 'btn_cancel'"></a>
+    <button class="btn btn-primary" data-bind="res: 'btn_create_query', click: save, enable: HasBibliography"></button>
+</div>
+

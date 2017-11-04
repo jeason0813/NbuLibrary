@@ -1,0 +1,10 @@
+﻿<h3 data-bind="res: 'heading_refanalysis_analysisquery'"></h3>
+
+<div data-bind="template: { name: 'GeneralForm' }">
+</div>
+
+<div style="margin-top: 1em;">
+    <a href="#/refanalysis/queries" class="btn" data-bind="res: 'btn_cancel'"></a>
+    <button class="btn btn-primary" data-bind="res: 'btn_create_query', click: save, enable: IsDirty"></button>
+</div>
+

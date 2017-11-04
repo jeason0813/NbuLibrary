@@ -1,0 +1,14 @@
+﻿<h2 data-bind="res: 'nomenclatures_grid_heading'"></h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th data-bind="res: 'nomenclatures_column_name'"></th>
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: items">
+        <tr>
+            <td data-bind="res: 'entity_' + $data.toLowerCase()"></td>
+            <td><a class="btn btn-primary" data-bind="attr : {href : '#/nomenclature/' + $data }, res: 'btn_manage_nom'"></a></td>
+        </tr>
+    </tbody>
+</table>

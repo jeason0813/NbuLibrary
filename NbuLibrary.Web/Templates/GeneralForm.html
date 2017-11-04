@@ -1,0 +1,11 @@
+﻿<div data-bind="if : LoadedDef() && Loaded()">
+    <form data-bind="validate: true">
+        <div data-bind="foreach: Definition().Fields">
+            <label data-bind="text: Label, attr : {for : Property}"></label>
+            <div data-bind="editorFor : {Field : $data, Item : $root.Entity}"></div>
+        </div>
+    </form>
+</div>
+<!-- ko if: NoAccess -->
+<div class="alert">The page does not exists or you don't have permissions to open it.</div>
+<!-- /ko -->

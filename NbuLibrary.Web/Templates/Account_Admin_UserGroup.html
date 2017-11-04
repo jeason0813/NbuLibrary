@@ -1,0 +1,90 @@
+﻿<div style="border-radius: 5px; border: 1px solid #666; padding: 1em;">
+    <h2 data-bind="res: 'heading_usergroup'"></h2>
+    <!-- ko if: !!Loaded() -->
+
+    <div>
+        <button class="btn" data-bind="res: 'btn_cancel', click: cancel"></button>
+        <button class="btn btn-primary" data-bind="res: 'btn_save', click: save"></button>
+    </div>
+    <hr />
+    <div>
+        <div class="span2">
+            <label data-bind="res: 'usergroupform_name'"></label>
+        </div>
+        <div class="span8">
+            <input type="text" data-bind="value: Entity.Data.Name" />
+        </div>
+    </div>
+    <div>
+        <div class="span2">
+            <label data-bind="res: 'usergroupform_fortype'"></label>
+        </div>
+        <div class="span8">
+            <select data-bind="value: Entity.Data.UserType, select2: {}" style="width: 100%;">
+                <option value="0" data-bind="res: 'Customer', attr: { selected: Entity.Data.UserType() === 0 }"></option>
+                <option value="1" data-bind="res: 'Librarian', attr: { selected: Entity.Data.UserType() === 1 }"></option>
+                <option value="2" data-bind="res: 'Admin', attr: { selected: Entity.Data.UserType() === 2 }"></option>
+            </select>
+        </div>
+    </div>
+    <h3>Permissions</h3>
+    <div data-bind="foreach: Permissions">
+        <div data-bind="if: Options.length > 0">
+            <div class="span2" data-bind="text: Data.ModuleName"></div>
+            <div class="span8">
+                <select data-bind="foreach: Options, select2: { options: { placeholder: 'Permissions' }, changeHandler: $root.permChanged }" multiple style="width: 100%;">
+                    <option data-bind="value: name, text: name, attr: { selected: has() }"></option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <h3 data-bind="res: 'title_usergroup_usersgrid'"></h3>
+
+    <!-- ko if: Users.LoadedDef() && Users.Loaded() -->
+
+    <!-- ko if: Users.Items().length -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <!-- ko foreach: $root.Users.Definition().Fields -->
+                <th data-bind="click: $root.Users.sort"><span data-bind="    text: Label"></span><i data-bind="    visible: $root.Users.Sorting.Field() === $data, css: { 'icon-arrow-up': $root.Users.Sorting.Desc(), 'icon-arrow-down': !$root.Users.Sorting.Desc() }"></i></th>
+                <!-- /ko -->
+
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Users.Items">
+            <tr>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn" data-bind="attr: { href: '#/account/users/' + Id() }"><i class="icon-list-alt"></i><span data-bind="    res: 'btn_open'"></span></a>
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a data-bind="attr: { href: '#/account/users/edit/' + Id() }"><i class="icon-edit"></i><span data-bind="    res: 'btn_edit'"></span></a></li>
+                        </ul>
+                    </div>
+                </td>
+                <!-- ko foreach: $root.Users.Definition().Fields -->
+                <td data-bind="viewText: { Field: $data, Item: $parent }"></td>
+                <!-- /ko -->
+
+            </tr>
+        </tbody>
+    </table>
+    <!-- /ko -->
+    <!-- ko if: Users.Items().length === 0 -->
+    <h3>No data.</h3>
+    <!-- /ko -->
+    <div data-bind="template: { name: 'GridPaging', data: Users }" class="btn-group">
+    </div>
+    <!-- ko template: {name: 'GridPaging', data: Users} -->
+    <!-- /ko -->
+
+
+    <!-- /ko -->
+
+    <!-- /ko -->
+</div>

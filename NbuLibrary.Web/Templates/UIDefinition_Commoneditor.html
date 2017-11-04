@@ -1,0 +1,19 @@
+﻿<div class="accordion-group">
+    <div class="accordion-heading">
+        <a class="accordion-toggle" data-toggle="collapse" data-bind="attr: { 'data-parent': '#acc' + $parent.Name(), href: '#' + $parent.Name() + '_' + $data.Property + '_' + $data.Entity + '_' + $data.Role }" data-parent="#accNomenclatures_Admin_Form" href="#Nomenclatures_Admin_Form_Name">
+            <span data-bind="text: Type == 5 ? 'Checkbox' : Type == 3 ? 'Enumlist' : Type == 7 ? 'Autocomplete' : Type == 8 ? 'Htmlfield' : 'FileUpload'"></span>(<span data-bind="    text: Property"></span>)
+        </a>
+    </div>
+    <div data-bind="attr: { id: $parent.Name() + '_' + $data.Property + '_' + $data.Entity + '_' + $data.Role }" class="accordion-body in collapse" style="height: auto;">
+        <div class="accordion-inner">
+            <a class="btn" href="#" data-bind="click: $root.remove"><i class="icon icon-trash"></i>Delete</a>
+            <hr />
+            <label>Label</label>
+            <input type="text" data-bind="value: Label" />
+            <label>Order</label>
+            <input type="text" data-bind="value: Order" />
+            <label>Required</label>
+            <input type="checkbox" data-bind="checked: Required" />
+        </div>
+    </div>
+</div>

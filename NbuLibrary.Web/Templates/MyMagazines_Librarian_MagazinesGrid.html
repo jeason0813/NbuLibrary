@@ -1,0 +1,41 @@
+﻿<h3 data-bind="res: 'heading_mymagazines_magazines'"></h3>
+
+<!-- ko if: LoadedDef() && Loaded() -->
+<div data-bind="template: {name : 'Filters', data : Filters}"></div>
+<!-- ko if: Items().length -->
+<table class="table table-striped">
+    <thead>
+        <tr data-bind="template: { name: 'GridHeaders' }">
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr>
+            <td>
+                <div class="btn-group">
+                    <a class="btn" data-bind="click: $root.edit"><i class=" icon-pencil"></i>&nbsp;<span data-bind="    res: 'btn_edit'"></span></a>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a data-bind="attr: { href: '#/mymagazines/issues/' + Id() }"><i class="icon-list"></i>&nbsp;<span data-bind="    res: 'btn_manage_issues'"></span></a></li>
+                        <li><a data-bind="attr: { href: '#/mymagazines/subscriptions/' + Id() }"><i class="icon-user"></i>&nbsp;<span data-bind="    res: 'btn_manage_subscriptions'"></span></a></li>
+                        <li><a data-bind="attr: { href: '#/notif/related/Magazine/Notification/' + Id() }"><i class="icon-envelope"></i> <span data-bind="    res: 'btn_view_notifications'"></span></a></li>
+                    </ul>
+                </div>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+
+<!-- ko template: {name : 'GridPaging'} -->
+<!-- /ko -->
+<button class="btn btn-success" data-bind="click: create"><i class="icon-plus"></i>&nbsp;<span data-bind="    res: 'btn_add_magazine'"></span></button>
+
+<!-- /ko -->

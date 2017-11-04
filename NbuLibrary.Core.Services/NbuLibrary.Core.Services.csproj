@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D81E078D-3B43-4C20-8F40-C5610ACDD7B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NbuLibrary.Core.Services</RootNamespace>
+    <AssemblyName>NbuLibrary.Core.Services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IBackgroundService.cs" />
+    <Compile Include="IDomainChangeListener.cs" />
+    <Compile Include="IDomainModelService.cs" />
+    <Compile Include="ICacheService.cs" />
+    <Compile Include="IDatabaseService.cs" />
+    <Compile Include="IEntityOperationService.cs" />
+    <Compile Include="IFileService.cs" />
+    <Compile Include="ILoggingService.cs" />
+    <Compile Include="INotificationService.cs" />
+    <Compile Include="IReportingService.cs" />
+    <Compile Include="ISecurityService.cs" />
+    <Compile Include="ISequenceProvider.cs" />
+    <Compile Include="ISessionService.cs" />
+    <Compile Include="ITemplateService.cs" />
+    <Compile Include="IUIDefinitionService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TEntity.cs" />
+    <Compile Include="tmp\EntityOperation.cs" />
+    <Compile Include="tmp\EntityQuery.cs" />
+    <Compile Include="tmp\HtmlProcessor.cs" />
+    <Compile Include="tmp\HtmlTemplate.cs" />
+    <Compile Include="tmp\IBusinessLogic.cs" />
+    <Compile Include="tmp\IModule.cs" />
+    <Compile Include="tmp\IUIProvider.cs" />
+    <Compile Include="tmp\PropertyTypes.cs" />
+    <Compile Include="tmp\PropertyUpdatesCollection.cs" />
+    <Compile Include="tmp\UIDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NbuLibrary.Core.DataModel\NbuLibrary.Core.DataModel.csproj">
+      <Project>{7359c86b-2c46-4523-842b-a4efb35a4b73}</Project>
+      <Name>NbuLibrary.Core.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NbuLibrary.Core.Domain\NbuLibrary.Core.Domain.csproj">
+      <Project>{16ee204e-aa25-4eef-a85a-02856e27cbe1}</Project>
+      <Name>NbuLibrary.Core.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="redisign\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

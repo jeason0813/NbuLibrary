@@ -1,0 +1,13 @@
+﻿<div data-bind="if: LoadedDef() && Loaded()">
+    <div data-bind="foreach: Definition().Fields">
+        <dl>
+            <dt data-bind="text: Label"></dt>
+            <dd data-bind="viewText: { Field: $data, Item: $parent.Entity }"></dd>
+        </dl>
+        <!--<div class="muted" data-bind="text: Label"></div>
+        <div class="data-field" data-bind="viewText: {Field : $data, Item : $root.Entity}"></div>-->
+    </div>
+</div>
+<!-- ko if: NoAccess -->
+<div class="alert">The page does not exists or you don't have permissions to open it.</div>
+<!-- /ko -->

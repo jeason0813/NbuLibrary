@@ -1,0 +1,24 @@
+﻿<h2 data-bind="res: 'title_profile_updateinfo'"></h2>
+<div data-bind="if: Loaded()">
+    <form data-bind="validate: true">
+        <div data-bind="foreach: Fields">
+            <label data-bind="attr: { for: Property }">
+                <!-- ko if: Required -->
+                <span class="required" style="color: red">*</span><!-- /ko --><span data-bind="text: Label"></span>
+            </label>
+            <div data-bind="editorFor: { Field: $data, Item: $root.Entity }"></div>
+        </div>
+        <div>
+            <label data-bind="res: 'lbl_profile_usergroup'"></label>
+            <select data-bind="foreach: Groups, select2: { options: { placeholder: 'User group' }, changeHandler: userGroupChanged }">
+                <option data-bind="value: id, text: label, attr: { selected: id == $root.Entity.RelationsData.UserGroup_UserGroup().Entity.Id }"></option>
+            </select>
+            <!--<div data-bind="text: $root.Entity.Rela"></div>-->
+        </div>
+        <hr />
+        <div>
+            <div class="alert" data-bind="visible: NeedsReactivation"><strong>Важно!</strong> Промяната на потребителската група, факултетен номер или номер на читателска карта ще деактивира вашият потребител и ще се наложи отново да премине през процес на потвърждаване от страна на служител на Библиотеката.</div>
+            <button class="btn btn-primary" data-bind="click: $root.save, enable: IsDirty, res: 'btn_save'"></button>
+        </div>
+    </form>
+</div>

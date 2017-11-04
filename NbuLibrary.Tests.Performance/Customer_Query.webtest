@@ -1,0 +1,2048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebTest Name="WebTest1" Id="83576080-95c9-46db-8f0c-050df4d1cc28" Owner="" Priority="2147483647" Enabled="True" CssProjectStructure="" CssIteration="" Timeout="0" WorkItemIds="" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010" Description="" CredentialUserName="" CredentialPassword="" PreAuthenticate="True" Proxy="" StopOnError="False" RecordedResultFile="WebTest1.55766226-b95b-4ab5-950c-3b14f7af605d.rec.webtestresult" ResultsLocale="">
+  <Items>
+    <Request Method="GET" Guid="20b81480-cc82-4c9e-ae42-5450e5e1003e" Version="1.1" Url="http://localhost:7564/" ThinkTime="9" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:7564/Login?ReturnUrl=%2f" ReportingName="" IgnoreHttpStatusCode="False">
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractHiddenFields, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="1" DisplayName="Extract Hidden Fields" Description="Extract all hidden fields from the response and place them into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam4.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam5.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam8.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam9.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam10.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam16.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam17.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam21.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam28.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam29.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam34.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam35.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam36.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam41.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam42.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam43.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam53.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam54.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam56.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam58.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam68.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam69.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam72.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam75.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam78.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam84.PropertyUpdates[3][Value]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam87.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam104.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam105.RelatedTo[0][AllProperties]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; /&gt;&#xD;" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+    </Request>
+    <Request Method="POST" Guid="9011b0b4-3ef0-4c5c-8e5b-93cb2b73fac7" Version="1.1" Url="http://localhost:7564/Login" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:7564/" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://localhost:7564/Login?ReturnUrl=%2f" />
+      </Headers>
+      <CorrelationExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam1.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam2.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam3.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam6.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam7.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam11.Includes[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam12.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam13.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam14.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam15.Paging[Page]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam18.Rules[0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam19.Includes[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam20.Includes[1][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam22.PropertyUpdates[0][Value]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam23.Includes[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam24.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam25.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam26.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam27.Paging[Page]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam30.Includes[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam31.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam32.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam33.Paging[Page]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam37.Includes[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam38.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam39.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam40.Paging[Page]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam44.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam45.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam46.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam47.Includes[2][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam48.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam49.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam50.SortBy[Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ull,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:nul" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam51.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam52.Paging[Page]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam55.Rules[0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam57.Rules[0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam59.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam60.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam61.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam62.Includes[2][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam63.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam64.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam65.SortBy[Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ull,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:nul" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam66.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam67.Paging[Page]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam70.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam71.Paging[Page]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam73.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam74.SortBy[Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="rs&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:&quot;По" />
+            <RuleParameter Name="Index" Value="3" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam76.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam77.SortBy[Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="rs&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:&quot;По" />
+            <RuleParameter Name="Index" Value="3" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam79.PropertyUpdates[1][Value]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam80.PropertyUpdates[2][Value]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam81.RelationUpdates[0][Operation]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam82.RelationUpdates[1][Id]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam83.RelationUpdates[1][Operation]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam85.AllProperties" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam86.SortBy[Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="rs&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:&quot;По" />
+            <RuleParameter Name="Index" Value="3" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam88.ReplyMethod" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam89.PaymentMethod" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam90.PropertyUpdates[1][Value]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam91.PropertyUpdates[2][Value]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam92.RelationUpdates[0][Operation]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam93.RelationUpdates[1][Id]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam94.RelationUpdates[1][Operation]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam95.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam96.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam97.Rules[0][Values][]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="2" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam98.Includes[2][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam99.RelatedTo[0][Entity]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="me&quot;:&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;,&quot;Da" />
+            <RuleParameter Name="Index" Value="34" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam100.RelatedTo[0][Rules][0][Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="se&quot;,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:9,&quot;" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam101.SortBy[Property]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="ull,&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;:nul" />
+            <RuleParameter Name="Index" Value="4" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam102.SortBy[Descending]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="den=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot;&gt;&#xD;&#xA; " />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="FormPostParam103.Paging[Page]" DisplayName="" Description="">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="lue=&quot;" />
+            <RuleParameter Name="EndsWith" Value="&quot; dat" />
+            <RuleParameter Name="Index" Value="1" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="Required" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </CorrelationExtractionRules>
+      <QueryStringParameters>
+        <QueryStringParameter Name="ReturnUrl" Value="%2f" RecordedValue="%2f" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ReturnUrl" Value="{{$HIDDEN1.ReturnUrl}}" RecordedValue="/" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Email" Value="test5@nbu.bg" RecordedValue="test5@nbu.bg" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Password" Value="test5" RecordedValue="test5" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RememberMe" Value="{{$HIDDEN1.RememberMe}}" RecordedValue="false" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="9df7ae51-05ea-4855-b70c-6c960608b967" Version="1.1" Url="http://localhost:7564/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:7564/#/" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="d43d54c1-f825-40c3-9935-5774394b706b" Version="1.1" Url="http://localhost:7564/api/ViewDef/All" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/" />
+      </Headers>
+    </Request>
+    <Request Method="POST" Guid="92ae3fda-364d-4183-acba-bc0f20388e5c" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam4.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="Status" RecordedValue="Status" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam1.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam2.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Customer" RecordedValue="Customer" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam5.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam3.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="cd57c80b-a8da-48e5-889a-55b50f03ddda" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam8.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="Received" RecordedValue="Received" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam9.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam6.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Recipient" RecordedValue="Recipient" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam10.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam7.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="07d87798-bf6c-424b-b233-12eb9128c578" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="Notifications_All_Inbox" RecordedValue="Notifications_All_Inbox" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="bf0463d7-2f50-402e-9c22-7a581e7a7c4b" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Received" RecordedValue="Received" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Subject" RecordedValue="Subject" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Body" RecordedValue="Body" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Date" RecordedValue="Date" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam16.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam11.Includes[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Sender" RecordedValue="Sender" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam12.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Recipient" RecordedValue="Recipient" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam17.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam13.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="Date" RecordedValue="Date" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam14.SortBy[Descending]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[Page]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam15.Paging[Page]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[PageSize]" Value="10" RecordedValue="10" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="0dff92d7-afc9-4446-81fb-21721133a765" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="bd08986c-22e9-47d3-a6c3-655b018cdb6b" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="69c60a2f-59ca-4309-ba46-77ef41e68f25" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="e47f61cb-ac6b-4329-8c0f-f034293f059b" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="e4a029ee-c929-4d32-a7ae-51b2ad05ab46" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="383b9446-b163-422c-96a4-69cc836cb7e1" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="f6bbe476-3982-453c-bb94-23e0931c0565" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="deffdefc-68c0-4911-a0a9-92b68e9370a9" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="41bd0201-1800-4bd8-b2c8-af93aeda1d2b" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/notif/read/37" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="Notifications_All_Read" RecordedValue="Notifications_All_Read" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="d4b39953-62cd-4dab-9a31-334a607d2535" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/notif/read/37" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Subject" RecordedValue="Subject" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Body" RecordedValue="Body" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam21.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam18.Rules[0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="37" RecordedValue="37" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam19.Includes[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Sender" RecordedValue="Sender" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam20.Includes[1][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Role]" Value="Recipient" RecordedValue="Recipient" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Entity]" Value="File" RecordedValue="File" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Role]" Value="Attachment" RecordedValue="Attachment" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="17698f99-34b3-484f-a9ba-a574ec5cb73b" Version="1.1" Url="http://localhost:7564/api/Entity/Update" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/notif/read/37" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Id" Value="37" RecordedValue="37" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Entity" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[0][Name]" Value="Received" RecordedValue="Received" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[0][Value]" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam22.PropertyUpdates[0][Value]}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="373b512d-5391-48be-a5b4-3aaf909f859d" Version="1.1" Url="http://localhost:7564/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:7564/#/notif/inbox/" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="POST" Guid="02beab5b-1f19-41de-8f66-18b9a2efc88a" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/notif/inbox/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Received" RecordedValue="Received" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Subject" RecordedValue="Subject" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Body" RecordedValue="Body" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Date" RecordedValue="Date" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam28.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam23.Includes[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Sender" RecordedValue="Sender" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam24.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Recipient" RecordedValue="Recipient" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam29.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam25.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="Date" RecordedValue="Date" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam26.SortBy[Descending]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[Page]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam27.Paging[Page]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[PageSize]" Value="10" RecordedValue="10" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="6a09f7fe-e742-4afe-831e-a94d8faf08fb" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/notif/inbox/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Received" RecordedValue="Received" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Subject" RecordedValue="Subject" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Body" RecordedValue="Body" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Date" RecordedValue="Date" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam34.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam30.Includes[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Sender" RecordedValue="Sender" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam31.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Recipient" RecordedValue="Recipient" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam35.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam32.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="Body" RecordedValue="Body" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam36.SortBy[Descending]}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Role]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Entity]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Paging[Page]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam33.Paging[Page]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[PageSize]" Value="10" RecordedValue="10" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="b27e33fe-a12c-452b-baff-22d51f703a19" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="7" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/notif/inbox/" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Notification" RecordedValue="Notification" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Received" RecordedValue="Received" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Subject" RecordedValue="Subject" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Body" RecordedValue="Body" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Date" RecordedValue="Date" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam41.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam37.Includes[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Sender" RecordedValue="Sender" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam38.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Recipient" RecordedValue="Recipient" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam42.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam39.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="Subject" RecordedValue="Subject" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam43.SortBy[Descending]}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Role]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Entity]" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Paging[Page]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam40.Paging[Page]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[PageSize]" Value="10" RecordedValue="10" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="dc27b74f-09e8-4fd6-875f-58a6ab7e5eb3" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="BiblRef_Customer_BibliographicQuery_Grid" RecordedValue="BiblRef_Customer_BibliographicQuery_Grid" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="eddc39a7-47d1-4a46-9a7a-c57b8019d461" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="BibliographicQuery" RecordedValue="BibliographicQuery" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Status" RecordedValue="Status" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="PaymentMethod" RecordedValue="PaymentMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Number" RecordedValue="Number" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="ForNew" RecordedValue="ForNew" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="ReplyBefore" RecordedValue="ReplyBefore" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="ReplyMethod" RecordedValue="ReplyMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam53.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="Status" RecordedValue="Status" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam44.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam45.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam46.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="anyof" RecordedValue="anyof" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Entity]" Value="Bibliography" RecordedValue="Bibliography" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Role]" Value="Query" RecordedValue="Query" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam47.Includes[2][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Role]" Value="ProcessedBy" RecordedValue="ProcessedBy" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam48.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Customer" RecordedValue="Customer" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam54.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam49.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="CreatedOn" RecordedValue="CreatedOn" CorrelationBinding="{{FormPostParam50.SortBy[Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam51.SortBy[Descending]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[Page]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam52.Paging[Page]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[PageSize]" Value="10" RecordedValue="10" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="c5f87a64-995f-4abb-ae71-099785eb348f" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="BibliographicQuery" RecordedValue="BibliographicQuery" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="cdeccffa-d744-4866-b5c4-8239f40c3174" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="BibliographicQuery" RecordedValue="BibliographicQuery" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="4a27b17f-7ad3-43b3-a4ef-d2329b729c14" Version="1.1" Url="http://localhost:7564/api/Entity/GetEnum" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="enumClass" Value="NbuLibrary.Core.Domain.QueryStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" RecordedValue="NbuLibrary.Core.Domain.QueryStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="dcb95c1c-7fc2-4989-bd67-6d9fe08bc0c6" Version="1.1" Url="http://localhost:7564/api/Entity/GetEnum" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="enumClass" Value="NbuLibrary.Core.Domain.QueryStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" RecordedValue="NbuLibrary.Core.Domain.QueryStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="c3e47f2f-d6b6-4345-85ff-0e6182eb0a04" Version="1.1" Url="http://localhost:7564/api/Entity/GetEnum" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="enumClass" Value="NbuLibrary.Core.Domain.PaymentStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" RecordedValue="NbuLibrary.Core.Domain.PaymentStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="e95b73c9-7579-4f6f-88c9-0f217fc2a122" Version="1.1" Url="http://localhost:7564/api/Entity/GetEnum" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="enumClass" Value="NbuLibrary.Core.Domain.ReplyMethods,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" RecordedValue="NbuLibrary.Core.Domain.ReplyMethods,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="34d53c5e-8822-45df-a86f-163abfbf7ff6" Version="1.1" Url="http://localhost:7564/api/Entity/GetEnum" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="enumClass" Value="NbuLibrary.Core.Domain.QueryStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" RecordedValue="NbuLibrary.Core.Domain.QueryStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="d1b92a1b-4175-4081-aa71-c22cf64111fc" Version="1.1" Url="http://localhost:7564/api/Entity/GetEnum" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="enumClass" Value="NbuLibrary.Core.Domain.PaymentStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" RecordedValue="NbuLibrary.Core.Domain.PaymentStatus,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="da268997-5a6c-40b9-a9cb-93a521e0ca57" Version="1.1" Url="http://localhost:7564/api/Entity/GetEnum" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="enumClass" Value="NbuLibrary.Core.Domain.ReplyMethods,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" RecordedValue="NbuLibrary.Core.Domain.ReplyMethods,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="810f7bc2-4893-4f5c-9f38-ff1481f8c2f7" Version="1.1" Url="http://localhost:7564/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:7564/#/biblref/queries/8" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="38649014-7fc7-446d-abc8-69d25e488e93" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries/8" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="BiblRef_Customer_BibliographicQuery_Details" RecordedValue="BiblRef_Customer_BibliographicQuery_Details" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="e29dc606-633d-446a-87c3-99fd0f0c8bf3" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries/8" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="BibliographicQuery" RecordedValue="BibliographicQuery" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Number" RecordedValue="Number" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="ForNew" RecordedValue="ForNew" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Status" RecordedValue="Status" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam56.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam55.Rules[0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Entity]" Value="Bibliography" RecordedValue="Bibliography" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Role]" Value="Query" RecordedValue="Query" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="5b3d933d-41da-41a5-87dc-cae9128c8838" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries/8" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="BiblRef_Customer_Bibliography_Details" RecordedValue="BiblRef_Customer_Bibliography_Details" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="f7dbf202-a19a-4ed0-884d-957fc37d63c8" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries/8" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Bibliography" RecordedValue="Bibliography" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam58.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam57.Rules[0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="BibliographicDocument" RecordedValue="BibliographicDocument" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Included" RecordedValue="Included" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Entity]" Value="Language" RecordedValue="Language" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Role]" Value="Keywords" RecordedValue="Keywords" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Entity]" Value="File" RecordedValue="File" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Role]" Value="File" RecordedValue="File" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="5cf2665a-39d2-4e6b-b4e2-3247965f56c2" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries/8" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="Bibliography" RecordedValue="Bibliography" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="e5285612-0a8f-410b-852f-889e6b490c4b" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="1" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="BibliographicQuery" RecordedValue="BibliographicQuery" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Status" RecordedValue="Status" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="PaymentMethod" RecordedValue="PaymentMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Number" RecordedValue="Number" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="ForNew" RecordedValue="ForNew" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="ReplyBefore" RecordedValue="ReplyBefore" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="ReplyMethod" RecordedValue="ReplyMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam68.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="Status" RecordedValue="Status" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam59.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam60.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam61.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="anyof" RecordedValue="anyof" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Entity]" Value="Bibliography" RecordedValue="Bibliography" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Role]" Value="Query" RecordedValue="Query" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam62.Includes[2][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Role]" Value="ProcessedBy" RecordedValue="ProcessedBy" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam63.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Customer" RecordedValue="Customer" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam69.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam64.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="CreatedOn" RecordedValue="CreatedOn" CorrelationBinding="{{FormPostParam65.SortBy[Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam66.SortBy[Descending]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[Page]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam67.Paging[Page]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[PageSize]" Value="10" RecordedValue="10" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="8843bccb-4f68-47e2-bc09-bacc73980510" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="2" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="BiblRef_Customer_BibliographicQuery_Form" RecordedValue="BiblRef_Customer_BibliographicQuery_Form" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="GET" Guid="7df1a8ac-ab65-4269-859e-a1873c30fd1f" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="BiblRef_Customer_BibliographyGrid" RecordedValue="BiblRef_Customer_BibliographyGrid" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="4d8f1247-a73e-4cf0-8426-d83d896d5a02" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Bibliography" RecordedValue="Bibliography" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Subject" RecordedValue="Subject" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="FromYear" RecordedValue="FromYear" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="ToYear" RecordedValue="ToYear" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam72.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="Complete" RecordedValue="Complete" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam70.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="BibliographicDocument" RecordedValue="BibliographicDocument" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Included" RecordedValue="Included" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Entity]" Value="Language" RecordedValue="Language" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Role]" Value="Keywords" RecordedValue="Keywords" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Paging[Page]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam71.Paging[Page]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[PageSize]" Value="10" RecordedValue="10" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="cb8ea746-44ae-4471-b63e-6ae55744bc1a" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Language" RecordedValue="Language" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam73.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="Value" RecordedValue="Value" CorrelationBinding="{{FormPostParam74.SortBy[Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam75.SortBy[Descending]}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="827f6b94-34f6-48c3-b159-f47b7b5b733f" Version="1.1" Url="http://localhost:7564/api/Entity/GetEnum" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="enumClass" Value="NbuLibrary.Core.Domain.PaymentMethod,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" RecordedValue="NbuLibrary.Core.Domain.PaymentMethod,+NbuLibrary.Core.Domain,+Version%3d1.0.0.0,+Culture%3dneutral,+PublicKeyToken%3dnull" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="3e47e883-6896-4fb9-b4b8-123a9d522626" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="10" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="Arguments" RecordedValue="Arguments" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam76.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="Value" RecordedValue="Value" CorrelationBinding="{{FormPostParam77.SortBy[Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam78.SortBy[Descending]}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="8adf3102-e095-47bb-ae93-5ac86b158508" Version="1.1" Url="http://localhost:7564/api/Entity/Update" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/biblref/queries" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="BibliographicQuery" RecordedValue="BibliographicQuery" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[0][Name]" Value="ReplyBefore" RecordedValue="ReplyBefore" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[0][Value]" Value="2014-01-23T22:00:00.000Z" RecordedValue="2014-01-23T22:00:00.000Z" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[1][Name]" Value="ReplyMethod" RecordedValue="ReplyMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[1][Value]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam79.PropertyUpdates[1][Value]}}" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[2][Name]" Value="PaymentMethod" RecordedValue="PaymentMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[2][Value]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam80.PropertyUpdates[2][Value]}}" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[3][Name]" Value="ForNew" RecordedValue="ForNew" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[3][Value]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam84.PropertyUpdates[3][Value]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[0][Id]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[0][Entity]" Value="Bibliography" RecordedValue="Bibliography" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[0][Role]" Value="Query" RecordedValue="Query" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[0][Operation]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam81.RelationUpdates[0][Operation]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[1][Id]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam82.RelationUpdates[1][Id]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[1][Entity]" Value="Arguments" RecordedValue="Arguments" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[1][Role]" Value="Arguments" RecordedValue="Arguments" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[1][Operation]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam83.RelationUpdates[1][Operation]}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="2c549dda-85fd-48f5-9b28-1d52696c8202" Version="1.1" Url="http://localhost:7564/" ThinkTime="17" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:7564/#/biblref/queries" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="33da59e1-b007-4feb-a182-b67ce05ff2c5" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/refanalysis/query" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="RefAnalysis_Customer_AnalysisQuery_Form" RecordedValue="RefAnalysis_Customer_AnalysisQuery_Form" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="62e9588a-c369-414a-94b6-578bc6c7cac0" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/refanalysis/query" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="AnalysisQuery" RecordedValue="AnalysisQuery" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="GET" Guid="0022d433-d2c2-4db5-9469-eb3b4e762d2c" Version="1.1" Url="http://localhost:7564/" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:7564/#/biblref/query" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="cd40ec9f-79a3-4a8a-81b1-6f6bf0ea614a" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/bibllist/query" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="BiblList_Customer_BibliographicListQuery_Form" RecordedValue="BiblList_Customer_BibliographicListQuery_Form" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="40698722-e237-41ca-b0fe-7e09bc48262c" Version="1.1" Url="http://localhost:7564/api/Entity/GetEntityModel" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/bibllist/query" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="name" Value="BibliographicListQuery" RecordedValue="BibliographicListQuery" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+      <StringHttpBody ContentType="" InsertByteOrderMark="False">
+      </StringHttpBody>
+    </Request>
+    <Request Method="POST" Guid="62b321a7-abfb-4e74-8eec-21c31bda097e" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="17" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/bibllist/query" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="BibliographicListStandart" RecordedValue="BibliographicListStandart" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam85.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="Value" RecordedValue="Value" CorrelationBinding="{{FormPostParam86.SortBy[Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam87.SortBy[Descending]}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="c3da2e13-670d-4fcb-a723-0192e8958142" Version="1.1" Url="http://localhost:7564/file/upload" ThinkTime="4" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/bibllist/query" />
+      </Headers>
+      <ExtractionRules>
+        <ExtractionRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ExtractText, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" VariableName="fileId" DisplayName="Extract Text" Description="Extract text from the response and place it into the test context.">
+          <RuleParameters>
+            <RuleParameter Name="StartsWith" Value="{&quot;files&quot;:[{&quot;id&quot;:" />
+            <RuleParameter Name="EndsWith" Value=",&quot;name&quot;" />
+            <RuleParameter Name="IgnoreCase" Value="False" />
+            <RuleParameter Name="UseRegularExpression" Value="False" />
+            <RuleParameter Name="Required" Value="True" />
+            <RuleParameter Name="ExtractRandomMatch" Value="False" />
+            <RuleParameter Name="Index" Value="0" />
+            <RuleParameter Name="HtmlDecode" Value="True" />
+            <RuleParameter Name="SearchInHeaders" Value="False" />
+          </RuleParameters>
+        </ExtractionRule>
+      </ExtractionRules>
+      <FormPostHttpBody>
+        <FormPostParameter Name="ReplyBefore" Value="12/28/2013" RecordedValue="12/28/2013" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="ReplyMethod" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam88.ReplyMethod}}" UrlEncode="True" />
+        <FormPostParameter Name="PaymentMethod" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam89.PaymentMethod}}" UrlEncode="True" />
+        <FormPostParameter Name="Value" Value="" RecordedValue="" CorrelationBinding="" UrlEncode="True" />
+        <FileUploadParameter Name="files[]" FileName="F:\Documents\Visual Studio 2012\Projects\NbuLibrary\NbuLibrary.Tests.Performance\sample - Copy (3).pdf" ContentType="application/pdf" GenerateUniqueName="True" UseGuids="False" FileUploadName="" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="POST" Guid="80e7188a-015b-4c66-b50b-530c00c03b84" Version="1.1" Url="http://localhost:7564/api/Entity/Update" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/bibllist/query" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="BibliographicListQuery" RecordedValue="BibliographicListQuery" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[0][Name]" Value="ReplyBefore" RecordedValue="ReplyBefore" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[0][Value]" Value="2013-12-27T22:00:00.000Z" RecordedValue="2013-12-27T22:00:00.000Z" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[1][Name]" Value="ReplyMethod" RecordedValue="ReplyMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[1][Value]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam90.PropertyUpdates[1][Value]}}" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[2][Name]" Value="PaymentMethod" RecordedValue="PaymentMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="PropertyUpdates[2][Value]" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam91.PropertyUpdates[2][Value]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[0][Id]" Value="{{fileId}}" RecordedValue="144" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[0][Entity]" Value="File" RecordedValue="File" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[0][Role]" Value="File" RecordedValue="File" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[0][Operation]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam92.RelationUpdates[0][Operation]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[1][Id]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam93.RelationUpdates[1][Id]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[1][Entity]" Value="BibliographicListStandart" RecordedValue="BibliographicListStandart" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[1][Role]" Value="Standart" RecordedValue="Standart" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelationUpdates[1][Operation]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam94.RelationUpdates[1][Operation]}}" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="4b4fb41c-df5f-4a61-9888-bc379caf5654" Version="1.1" Url="http://localhost:7564/" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="http://localhost:7564/#/bibllist/queries" ReportingName="" IgnoreHttpStatusCode="False" />
+    <Request Method="GET" Guid="57760e83-41c1-49fa-8628-48928eb36f71" Version="1.1" Url="http://localhost:7564/api/ViewDef/Get" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="*/*" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/bibllist/queries" />
+      </Headers>
+      <QueryStringParameters>
+        <QueryStringParameter Name="viewName" Value="BiblList_Customer_BibliographicListQuery_Grid" RecordedValue="BiblList_Customer_BibliographicListQuery_Grid" CorrelationBinding="" UrlEncode="False" UseToGroupResults="False" />
+      </QueryStringParameters>
+    </Request>
+    <Request Method="POST" Guid="a4bb250e-8c12-4b22-b18c-7a7f359b0fbd" Version="1.1" Url="http://localhost:7564/api/Entity/Search" ThinkTime="3" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Accept" Value="application/json, text/javascript, */*; q=0.01" />
+        <Header Name="X-Requested-With" Value="XMLHttpRequest" />
+        <Header Name="Referer" Value="http://localhost:7564/#/bibllist/queries" />
+      </Headers>
+      <FormPostHttpBody>
+        <FormPostParameter Name="Entity" Value="BibliographicListQuery" RecordedValue="BibliographicListQuery" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Status" RecordedValue="Status" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="PaymentMethod" RecordedValue="PaymentMethod" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Properties[]" Value="Number" RecordedValue="Number" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="AllProperties" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam104.AllProperties}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Property]" Value="Status" RecordedValue="Status" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="0" RecordedValue="0" CorrelationBinding="{{FormPostParam95.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam96.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Values][]" Value="2" RecordedValue="2" CorrelationBinding="{{FormPostParam97.Rules[0][Values][]}}" UrlEncode="True" />
+        <FormPostParameter Name="Rules[0][Operator]" Value="anyof" RecordedValue="anyof" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Entity]" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[0][Role]" Value="Payment" RecordedValue="Payment" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Entity]" Value="BibliographicListStandart" RecordedValue="BibliographicListStandart" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[1][Role]" Value="Standart" RecordedValue="Standart" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam98.Includes[2][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="Includes[2][Role]" Value="ProcessedBy" RecordedValue="ProcessedBy" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Entity]" Value="User" RecordedValue="User" CorrelationBinding="{{FormPostParam99.RelatedTo[0][Entity]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Role]" Value="Customer" RecordedValue="Customer" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][AllProperties]" Value="false" RecordedValue="false" CorrelationBinding="{{FormPostParam105.RelatedTo[0][AllProperties]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Property]" Value="id" RecordedValue="id" CorrelationBinding="{{FormPostParam100.RelatedTo[0][Rules][0][Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Values][]" Value="8" RecordedValue="8" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][Rules][0][Operator]" Value="is" RecordedValue="is" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="RelatedTo[0][rules][relation][is]" Value="undefined" RecordedValue="undefined" CorrelationBinding="" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Property]" Value="CreatedOn" RecordedValue="CreatedOn" CorrelationBinding="{{FormPostParam101.SortBy[Property]}}" UrlEncode="True" />
+        <FormPostParameter Name="SortBy[Descending]" Value="true" RecordedValue="true" CorrelationBinding="{{FormPostParam102.SortBy[Descending]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[Page]" Value="1" RecordedValue="1" CorrelationBinding="{{FormPostParam103.Paging[Page]}}" UrlEncode="True" />
+        <FormPostParameter Name="Paging[PageSize]" Value="10" RecordedValue="10" CorrelationBinding="" UrlEncode="True" />
+      </FormPostHttpBody>
+    </Request>
+    <Request Method="GET" Guid="74b5f72c-e96f-44ca-b62a-ea3bdfd6dfea" Version="1.1" Url="http://localhost:7564/Login/SignOut" ThinkTime="0" Timeout="300" ParseDependentRequests="True" FollowRedirects="True" RecordResult="True" Cache="False" ResponseTimeGoal="0" Encoding="utf-8" ExpectedHttpStatusCode="0" ExpectedResponseUrl="" ReportingName="" IgnoreHttpStatusCode="False">
+      <Headers>
+        <Header Name="Referer" Value="http://localhost:7564/" />
+      </Headers>
+    </Request>
+  </Items>
+  <ValidationRules>
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidateResponseUrl, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response URL" Description="Validates that the response URL after redirects are followed is the same as the recorded response URL.  QueryString parameters are ignored." Level="Low" ExectuionOrder="BeforeDependents" />
+    <ValidationRule Classname="Microsoft.VisualStudio.TestTools.WebTesting.Rules.ValidationRuleResponseTimeGoal, Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" DisplayName="Response Time Goal" Description="Validates that the response time for the request is less than or equal to the response time goal as specified on the request.  Response time goals of zero will be ignored." Level="Low" ExectuionOrder="AfterDependents">
+      <RuleParameters>
+        <RuleParameter Name="Tolerance" Value="0" />
+      </RuleParameters>
+    </ValidationRule>
+  </ValidationRules>
+</WebTest>

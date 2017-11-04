@@ -1,0 +1,20 @@
+﻿<form data-bind="validate: true">
+    <input type="hidden" name="service" data-bind="value: Service" />
+    <div>
+        <label data-bind="res:'lbl_report_name'"></label>
+        <div>
+            <input type="text" name="report_name" />
+        </div>
+        <label data-bind="res:'lbl_report_definition'"></label>
+        <div data-bind="fileupload: {validate: validateFile, url: '/Reports/Upload'}"></div>
+        <!--<div class="fileupload">
+            <table class="table table-bordered">
+                <tr>
+                    <td colspan="3" class="btn-group">
+                        <span class="btn btn-primary fileinput-button"><b class="icon-upload"></b>&nbsp; Upload<input id="fileupload" type="file" name="files[]"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>-->
+    </div>
+</form>

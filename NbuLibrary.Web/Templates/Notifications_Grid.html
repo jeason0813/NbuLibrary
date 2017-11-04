@@ -1,0 +1,51 @@
+﻿<!-- ko if: Mode() == 'inbox' -->
+<h3 data-bind="res: 'heading_notifications_inbox'"></h3>
+<!-- /ko -->
+<!-- ko if: Mode() == 'sent' -->
+<h3 data-bind="res: 'heading_notifications_sent'"></h3>
+<!-- /ko -->
+
+<!-- ko if: LoadedDef() && Loaded() -->
+<!-- ko if: Filters.Filters().length -->
+<div data-bind="template: { name: 'Filters', data: Filters }"></div>
+<!-- /ko -->
+<!-- ko if: Items().length -->
+<table class="table table-striped">
+    <thead>
+        <tr data-bind="template: { name: 'GridHeaders' }">
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr data-bind="css: { warning: !Data.Received() }">
+            <td>
+                <div class="btn-group">
+                    <a class="btn" data-bind="attr: { href: '#/notif/read/' + Id() }"><i class="icon-list-alt"></i><span data-bind="    res: 'btn_open'"></span></a>
+                    <!-- ko if: $root.Mode() == 'inbox' -->
+                    <button class="btn" data-bind="click: $root.archive, disable: Data.Archived()"><i class="icon-book"></i>&nbsp;<span data-bind="    res: 'btn_archive'"></span></button>
+                    <!-- /ko -->
+                    <!-- ko if: $root.Mode() == 'sent' -->
+                    <button class="btn" data-bind="click: $root.archive, disable: Data.ArchivedSent()"><i class="icon-book"></i>&nbsp;<span data-bind="    res: 'btn_archive'"></span></button>
+                    <!-- /ko -->
+                    <!--<button class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>-->
+                    <!--<ul class="dropdown-menu">
+                        <li><a data-bind="attr: { href: '#/account/users/edit/' + Id() }"><i class="icon-edit"> </i> <span data-bind="    res: 'btn_edit'"></span></a></li>
+                    </ul>-->
+                </div>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+<!-- ko template: {name : 'GridPaging'} -->
+<!-- /ko -->
+
+
+<!-- /ko -->

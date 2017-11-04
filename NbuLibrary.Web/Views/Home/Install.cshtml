@@ -1,0 +1,180 @@
+﻿@{
+    ViewBag.Title = "Install";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var filepath = Path.Combine(@"F:\Documents\Visual Studio 2012\Projects\NbuLibrary\NbuLibrary.Web\bin", "required_db.xml");
+    
+    //System.Xml.Serialization.XmlSerializer ser = new System.Xml.Serialization.XmlSerializer(typeof(List<NbuLibrary.Core.Sql.Table>));
+    List<NbuLibrary.Core.Sql.Table> tables = new List<NbuLibrary.Core.Sql.Table>();
+    //using(FileStream fs = new FileStream(filepath, FileMode.Open))
+    //{
+    //    tables = (List<NbuLibrary.Core.Sql.Table> )ser.Deserialize(fs);
+    //}
+
+    Dictionary<string, List<NbuLibrary.Core.Sql.StoredProcedure>> procs = new Dictionary<string, List<NbuLibrary.Core.Sql.StoredProcedure>>();
+    using (var conn = new System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings[1].ConnectionString))
+    {
+        conn.Open();
+
+        var selectTables = conn.CreateCommand();
+        selectTables.CommandText = "select * from INFORMATION_SCHEMA.TABLES;";
+        using (var reader = selectTables.ExecuteReader())
+        {
+            while (reader.Read())
+            {
+                tables.Add(new NbuLibrary.Core.Sql.Table(reader));
+            }
+        }
+
+        foreach (var table in tables)
+        {
+            var selectCols = conn.CreateCommand();
+            selectCols.CommandText = string.Format("select * from INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{0}'", table.Name);
+            using (var reader = selectCols.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    table.Columns.Add(new NbuLibrary.Core.Sql.Column(reader));
+                }
+            }
+
+            var selectConstraints = conn.CreateCommand();
+            selectConstraints.CommandText = string.Format("SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = '{0}';", table.Name);
+            using (var reader = selectConstraints.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    table.Constraints.Add(new NbuLibrary.Core.Sql.Constraint(reader));
+                }
+            }
+
+            foreach (var con in table.Constraints)
+            {
+                var selectConstraintColumns = conn.CreateCommand();
+                selectConstraintColumns.CommandText = string.Format("SELECT * FROM INFORMATION_SCHEMA.CONSTRAINT_COLUMN_USAGE WHERE {0}='{1}';", NbuLibrary.Core.Sql.Consts.CONSTRAINT_NAME, con.Name);
+                using (var reader = selectConstraintColumns.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        con.Columns.Add((string)reader[NbuLibrary.Core.Sql.Consts.COLUMN_NAME]);
+                    }
+                }
+            }
+
+            List<NbuLibrary.Core.Sql.StoredProcedure> tableProcs = new List<NbuLibrary.Core.Sql.StoredProcedure>();
+
+            var selectProcs = conn.CreateCommand();
+            selectProcs.CommandText = string.Format("select * from INFORMATION_SCHEMA.ROUTINES WHERE ROUTINE_NAME LIKE '{0}%'", table.Name);
+            using (var reader = selectProcs.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    tableProcs.Add(new NbuLibrary.Core.Sql.StoredProcedure(reader));
+                }
+            }
+
+            procs.Add(table.Name, tableProcs);
+        }
+    }
+}
+
+@*<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+</head>
+<body>*@
+    <h2>Install</h2>
+
+
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            @foreach (var tbl in tables)
+            {
+                <li><a href="#@tbl.Name" data-toggle="tab">@tbl.Name</a></li>
+            }
+        </ul>
+
+        <div class="tab-content">
+            @foreach (var tbl in tables)
+            {
+                <div class="tab-pane" id="@tbl.Name">
+
+                    <h3>@tbl.Name</h3>
+
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#@string.Format("{0}_Cols", tbl.Name)" data-toggle="tab">Columns</a></li>
+                            <li><a href="#@string.Format("{0}_Cons", tbl.Name)" data-toggle="tab">Constraints</a></li>
+                            <li><a href="#@string.Format("{0}_Procs", tbl.Name)" data-toggle="tab">Stored Procedures</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="@string.Format("{0}_Cols", tbl.Name)">
+                                <h4>Columns:</h4>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Column</th>
+                                            <th>Data Type</th>
+                                            <th>Length</th>
+                                            <th>Is Nullable</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var col in tbl.Columns)
+                                        {
+                                            <tr>
+                                                <td>@col.Name</td>
+                                                <td>@col.DataType</td>
+                                                <td>@col.Length</td>
+                                                <td>@col.IsNullable</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="tab-pane" id="@string.Format("{0}_Cons", tbl.Name)">
+                                <h4>Constraints:</h4>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Type</th>
+                                            <th>Columns</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var con in tbl.Constraints)
+                                        {
+                                            <tr>
+                                                <td>@con.Name</td>
+                                                <td>@con.Type</td>
+                                                <td>@String.Join("; ", @con.Columns)</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane" id="@string.Format("{0}_Procs", tbl.Name)">
+                                <h4>Procedures:</h4>
+                                <div>
+@*  @foreach (var proc in procs[tbl.Name])
+                                    {
+                                        <h5>@proc.Name</h5>
+                                        <pre>@proc.Definition</pre>
+                                    }*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+@*<script src="~/Scripts/bootstrap.min.js"></script>
+@*</body>
+</html>*@

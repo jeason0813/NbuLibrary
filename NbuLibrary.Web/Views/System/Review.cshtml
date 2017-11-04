@@ -1,0 +1,160 @@
+﻿@using NbuLibrary.Core.DataModel;
+@model NbuLibrary.Web.Controllers.ReviewModel
+@{
+    ViewBag.Title = "Review";
+    Layout = "~/Views/Shared/_LayoutSystem.cshtml";
+}
+
+<h2>Review</h2>
+
+@foreach (var ec in Model.DomainChanges.EntityChanges)
+{
+    var entityName = ec.New != null ? ec.New.Name : ec.Old.Name;
+    
+    
+    <h4>@entityName <span>(@ec.Change)</span></h4>    
+    if (ec.PropertyChanges != null && ec.PropertyChanges.Count() > 0)
+    {
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th class="span1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pc in ec.PropertyChanges)
+            {
+                var propname = pc.New != null ? pc.New.Name : pc.Old.Name;
+                string css = GetCssClass(pc.Change);
+                
+                <tr class="@css">
+                    <td>@propname</td>
+                    <td>@pc.Change</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+    if (ec.RuleChanges != null && ec.RuleChanges.Count() > 0)
+    {
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Rule</th>
+                <th class="span1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rulec in ec.RuleChanges)
+            {
+                var rule = rulec.New != null ? rulec.New : rulec.Old;
+                string css = GetCssClass(rulec.Change);
+                
+                <tr class="@css">
+                    <td>
+                        @rule.Type
+                        @if (rule.Type == EntityRuleType.Required)
+                        {
+                            var rr = rule as RequiredRuleModel;
+                            <span>(@rr.Property.Name)</span>
+                        }
+                        else if (rule.Type == EntityRuleType.Unique)
+                        {
+                            var ur = rule as UniqueRuleModel;
+                            <span>(@string.Join(", ", ur.Properties.Select(p => p.Name)))</span>   
+                        }
+                    </td>
+                    <td>@rulec.Change</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+}
+
+@foreach (var rc in Model.DomainChanges.RelationChanges)
+{
+    var rel = rc.New != null ? rc.New : rc.Old;
+    <h4>@rel.Left.Name related to @rel.Right.Name with role @rel.Role <span>(@rc.Change)</span></h4>  
+    if (rc.PropertyChanges != null && rc.PropertyChanges.Count() > 0)
+    {
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Property</th>
+                <th class="span1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pc in rc.PropertyChanges)
+            {
+                var propname = pc.New != null ? pc.New.Name : pc.Old.Name;
+                string css = GetCssClass(pc.Change);
+                
+                <tr class="@css">
+                    <td>@propname</td>
+                    <td>@pc.Change</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+    if (rc.RuleChanges != null && rc.RuleChanges.Count() > 0)
+    {
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Rule</th>
+                <th class="span1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var rulec in rc.RuleChanges)
+            {
+                var rule = rulec.New != null ? rulec.New : rulec.Old;
+                string css = GetCssClass(rulec.Change);
+                
+                <tr class="@css">
+                    <td>
+                        @rule.Type
+                        @if (rule.Type == EntityRuleType.Required)
+                        {
+                            var rr = rule as RequiredRuleModel;
+                            <span>(@rr.Property.Name)</span>
+                        }
+                        else if (rule.Type == EntityRuleType.Unique)
+                        {
+                            var ur = rule as UniqueRuleModel;
+                            <span>(@string.Join(", ", ur.Properties.Select(p => p.Name)))</span>   
+                        }
+                    </td>
+                    <td>@rulec.Change</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    }
+}
+
+@foreach (var other in Model.Other)
+{
+    <h4>@other</h4>
+}
+
+@functions{
+    private string GetCssClass(ChangeType change)
+    {
+        switch (change)
+        {
+            case ChangeType.Created:
+                return "success";
+            case ChangeType.Deleted:
+                return "error";
+            case ChangeType.Modified:
+                return "warning";
+            default:
+                return "";
+        }
+    }
+}

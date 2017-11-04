@@ -1,0 +1,43 @@
+﻿<div data-bind="foreach: Filters" class="">
+    <div class="" style="width: 370px; display: inline-block; *zoom: 1; *display:inline;">
+        <label data-bind="text: definition.Label"></label>
+        <!-- ko if: definition.Type == 1 || definition.Type == 2 || definition.Type == 7 || definition.Type == 8 -->
+        <div class="input-prepend">
+            <span class="add-on"><i class="icon-search"></i></span>
+            <input type="text" data-bind="value: value" />
+        </div>
+
+        <!-- /ko -->
+        <!-- ko if: definition.Type == 3 -->
+        <div data-bind="enumlist: { value: value, enumClass: definition.EnumClass, multiple: definition.Multiple, stretch: definition.Multiple }"></div>
+        <!-- /ko -->
+        <!-- ko if: definition.Type == 4 -->
+        <div data-bind="selectlist: { entity: definition.Entity, multiple: definition.Multiple, formula: definition.Formula, value: value, changeHandler: onChange, stretch: definition.Multiple }"></div>
+        <!-- /ko -->
+        <!-- ko if: definition.Type == 5 -->
+        <select data-bind="select2: { options: { placeholder: definition.Label, allowClear: true }, changeHandler: onChange }">
+            <option></option>
+            <option value="1" data-bind="text: definition.NoLabel, attr: { selected: value() == 1 }"></option>
+            <option value="2" data-bind="text: definition.YesLabel, attr: { selected: value() == 2 }"></option>
+        </select>
+        <!-- /ko -->
+        <!-- ko if: definition.Type == 6 -->
+        <select data-bind="select2: { value: value, options: { placeholder: definition.Label, allowClear: true } }">
+            <option></option>
+            <!-- ko foreach: options -->
+            <option data-bind="text: $data, attr: { value: $data, selected: $parent.value() == $data }"></option>
+            <!-- /ko -->
+        </select>
+        <!-- /ko -->
+        <!-- ko if: definition.Type == 9 -->
+        <div data-bind="datepicker: { value: value }"></div>
+        <!-- /ko -->
+    </div>
+</div>
+
+<div style="padding-top: 1em; padding-bottom: 1.5em; clear: both;" class="row">
+    <div class="span8">
+        <button class="btn btn-link" data-bind="click: clearAll"><span data-bind="    res: 'btn_clear_filters'"></span></button>
+        <button class="btn btn-primary" data-bind="click: apply"><i class="icon-filter"></i>&nbsp;<span data-bind="    res: 'btn_apply_filters'"></span></button>
+    </div>
+</div>

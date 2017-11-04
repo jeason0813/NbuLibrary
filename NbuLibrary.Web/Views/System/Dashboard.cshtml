@@ -1,0 +1,184 @@
+﻿@model NbuLibrary.Web.Controllers.DashboardModel
+@using NbuLibrary.Web.Controllers;
+
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutSystem.cshtml";
+    List<DashboardModel.Module> installed = new List<DashboardModel.Module>();
+    List<DashboardModel.Module> notInstalled = new List<DashboardModel.Module>();
+    foreach (var m in Model.Modules)
+    {
+        if (m.State != DashboardModel.State.NotInstalled && m.State != DashboardModel.State.PendingInstall)
+        {
+            installed.Add(m);
+        }
+        else
+        {
+            notInstalled.Add(m);
+        }
+    }
+
+    var upgradeBtnDisabled = Model.Modules.Count(x => x.State == DashboardModel.State.PendingInstall || x.State == DashboardModel.State.PendingUpgrade) > 0 ? "" : "disabled";
+}
+
+<h2>Dashboard</h2>
+
+<h4>Installed modules</h4>
+@if (installed.Count > 0)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="span2">ID</th>
+                <th class="span4">Name</th>
+                <th class="span4">Required</th>
+                <th class="span4"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in installed)
+            {
+                <tr>
+                    <td>@m.ID</td>
+                    <td>@m.Name</td>
+                    <td>
+                        <ul>
+                            @foreach (var id in m.Required)
+                            {
+                                var rm = @Model.Modules.Find(o => o.ID == id);
+                                var cssClass = (rm.State == DashboardModel.State.NotInstalled || rm.State == DashboardModel.State.NewVersion) ? "err" : "ok";
+                                <li class="@cssClass">@rm.Name</li>
+                            }
+                        </ul>
+                    </td>
+                    <td>
+                        @if (m.State == DashboardModel.State.NewVersion)
+                        {
+                            <button class="btn mark-module" data-id="@m.ID" data-state="@DashboardModel.State.PendingUpgrade">Upgrade</button>
+                            @Html.ActionLink("Review", "Review", new { id = m.ID })
+                        }
+                        else if (m.State == DashboardModel.State.PendingUpgrade)
+                        {
+                            <button class="btn" disabled>Pending upgrade</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td>No modules were installed.</td>
+        </tr>
+    </table>
+}
+<h4>Available modules</h4>
+@if (notInstalled.Count > 0)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th class="span2">ID</th>
+                <th class="span4">Name</th>
+                <th class="span4">Required</th>
+                <th class="span4"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in notInstalled)
+            {
+                <tr>
+                    <td>@m.ID</td>
+                    <td>@m.Name</td>
+                    <td>
+                        <ul>
+                            @foreach (var id in m.Required)
+                            {
+                                var rm = @Model.Modules.Find(o => o.ID == id);
+                                var cssClass = (rm.State == DashboardModel.State.NotInstalled || rm.State == DashboardModel.State.NewVersion) ? "err" : "ok";
+                                <li class="@cssClass">@rm.Name</li>
+                            }
+                        </ul>
+                    </td>
+                    <td>
+                        @if (m.State == DashboardModel.State.NotInstalled)
+                        {
+                            <button class="btn mark-module" data-id="@m.ID" data-state="@DashboardModel.State.PendingInstall">Install</button>
+                            @Html.ActionLink("Review", "Review", new { id = m.ID })
+                        }
+                        else if (m.State == DashboardModel.State.PendingInstall)
+                        {
+                            <button class="btn" disabled>Pending install</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <tr>
+            <td>No available modules.</td>
+        </tr>
+    </table>
+}
+
+<button class="btn btn-large clear-pending" @upgradeBtnDisabled>
+    Clear pending</button>
+<button class="btn btn-large btn-primary upgrade" @upgradeBtnDisabled>
+    Upgrade</button>
+
+<span class="upgrade-progress" style="display: none;">
+    <img src="~/Content/ajax-loader2.gif" style="margin-left: 0.2em;" />
+    Upgrade in progress...
+</span>
+<div class="upgrade-log" style="margin-top: 1em;">
+</div>
+
+<script>
+    $(function () {
+        $(document).on('click', '.clear-pending', function () {
+            var $this = $(this);
+            $.post('ClearMarked', { id: $this.data('id'), state: $this.data('state') }, function () {
+                window.location = window.location.href;
+            });
+        });
+
+        $(document).on('click', '.mark-module', function () {
+            var $this = $(this);
+            $.post('MarkModule', { id: $this.data('id'), state: $this.data('state') }, function (response) {
+                if (response.success) {
+                    window.location = window.location.href;
+                }
+                else
+                    alert(response.error);
+            });
+        });
+
+        $(document).on('click', '.upgrade', function () {
+            $('.btn').prop('disabled', true);
+            $('.upgrade-progress').show();
+            $.post('Upgrade', {}, function (log) {
+                $('.upgrade-progress').hide();
+                var cnt = 1;
+                $(log).each(function () {
+                    var alert = $(['<div class="alert alert-', this.Type, '"><strong>', this.Module, '</strong> <span>', this.Message, '</span><button type="button" class="close" data-dismiss="alert">&times;</button></div>'].join('')).appendTo($('.upgrade-log'));
+                    var id = 'msg_' + cnt; cnt++;
+                    if (this.FullText) {
+                        var toggle = $('<a class="btn btn-link" data-toggle="collapse" data-target="#' + id + '">Show Details</a>');
+                        alert.append(toggle);
+                        alert.append($(['<div id="', id, '">', this.FullText, '</div>'].join(''))
+                            .addClass('collapse'))
+                            .on('hide', function () { toggle.text('Show Details'); })
+                            .on('show', function () { toggle.text('Hide Details'); });
+                    }
+                });
+            });
+        });
+    });
+</script>

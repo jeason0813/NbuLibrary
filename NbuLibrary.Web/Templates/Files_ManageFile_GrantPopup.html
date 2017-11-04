@@ -1,0 +1,9 @@
+﻿<label>User</label>
+<div style="width: 100%" data-bind="select2: { options: { ajax: UsersAjax, minimumInputLength: 2 }, changeHandler: onChangeUser }">
+</div>
+<label>Permission</label>
+<div data-bind="enumlist: { value: Permission, enumClass: 'NbuLibrary.Core.Domain.FileAccessType, NbuLibrary.Core.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' }"></div>
+<!-- ko if: Permission() == 3 -->
+<label>Expires</label>
+<div type="datetime" data-bind="datepicker: { value: Expire, required: true }"></div>
+<!-- /ko -->

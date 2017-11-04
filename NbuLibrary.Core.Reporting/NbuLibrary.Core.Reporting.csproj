@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC48B2D8-6F5A-4596-BFF6-E38125CC0824}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NbuLibrary.Core.Reporting</RootNamespace>
+    <AssemblyName>NbuLibrary.Core.Reporting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bindings.cs" />
+    <Compile Include="Folder.cs" />
+    <Compile Include="Report.cs" />
+    <Compile Include="ReportingServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportingServiceImpl.cs" />
+    <Compile Include="Service References\SSRS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ActiveState.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CancelBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CancelJobResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CatalogItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateDataDrivenSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateFolderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateLinkedReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateReportHistorySnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateResourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.CreateSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DataRetrievalPlan.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DataSetDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DataSource.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DataSourceDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DataSourcePrompt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DeleteItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DeleteReportHistorySnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DeleteRoleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DeleteScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DeleteSubscriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.DisableDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.EnableDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Event.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ExecuteBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ExecutionSettingEnum.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ExpirationDefinition.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Extension.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ExtensionParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ExtensionSettings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.FindItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.FireEventResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.FlushCacheResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GenerateModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetCacheOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetDataDrivenSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetDataSourceContentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetExecutionOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetExtensionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetItemDataSourcePromptsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetItemDataSourcesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetItemTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetModelDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetModelItemPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetRenderResourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetReportDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetReportHistoryLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetReportHistoryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetReportLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetReportParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetResourceContentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetRolePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetSchedulePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetSystemPermissionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetSystemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetSystemPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.GetUserModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.InheritModelItemParentSecurityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.InheritParentSecurityResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ItemTypeEnum.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Job.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListChildrenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListDependentItemsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListExtensionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListJobsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListModelDrillthroughReportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListModelItemChildrenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListModelPerspectivesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListReportHistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListScheduledReportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListSchedulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListSecureMethodsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListSubscriptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListSubscriptionsUsingDataSourceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ListTasksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.LogoffResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.LogonUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ModelCatalogItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ModelDrillthroughReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ModelItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.MoveItemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ParameterValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ParameterValueOrFieldReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.PauseScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Policy.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.PrepareQueryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Property.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.RegenerateModelResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.RemoveAllModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ReportHistorySnapshot.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ReportParameter.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ResumeScheduleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Role.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Schedule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ScheduleDefinitionOrReference.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ServerInfoHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetCacheOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetDataDrivenSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetDataSourceContentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetExecutionOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetItemDataSourcesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetModelDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetModelDrillthroughReportsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetModelItemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetReportDefinitionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetReportHistoryLimitResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetReportHistoryOptionsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetReportLinkResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetReportParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetResourceContentsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetRolePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetSchedulePropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetSubscriptionPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetSystemPoliciesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.SetSystemPropertiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Subscription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Task.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.UpdateReportExecutionSnapshotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.ValidateExtensionSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\NbuLibrary.Core.Reporting.SSRS.Warning.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\SSRS\ReportService2005.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\SSRS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SSRS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SSRS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SSRS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NbuLibrary.Core.Domain\NbuLibrary.Core.Domain.csproj">
+      <Project>{16ee204e-aa25-4eef-a85a-02856e27cbe1}</Project>
+      <Name>NbuLibrary.Core.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NbuLibrary.Core.Services\NbuLibrary.Core.Services.csproj">
+      <Project>{d81e078d-3b43-4c20-8f40-c5610acdd7b7}</Project>
+      <Name>NbuLibrary.Core.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

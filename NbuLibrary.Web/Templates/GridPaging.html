@@ -1,0 +1,25 @@
+﻿<!--<div class="btn-group">-->
+<hr />
+<div class="row grid-paging">
+    <div class="span4">Общо <span data-bind="text: Paging.Total"></span> резултата.<span data-bind="if: Paging.Total() > 0"> Показани са от <span data-bind="text: Paging.From"></span> до <span data-bind="text: Paging.To"></span>.</span></div>
+    <div class="span8" style="text-align:right">
+        <div class="btn-group">
+            <button class="btn" data-bind="click: Paging.goToFirst, enable: Paging.HasPrev, attr: { disable: !Paging.HasPrev() }"><i class="icon-fast-backward"></i></button>
+            <button class="btn" data-bind="click: Paging.prev, enable: Paging.HasPrev, attr: { disable: !Paging.HasPrev() }"><i class="icon-step-backward"></i></button>
+            <!-- ko foreach: Paging.QuickPages -->
+            <button class="btn" data-bind="text: $data, css: {'btn-primary' : $data == $parent.Paging.Page()}, attr: {'disabled' : $data == $parent.Paging.Page()}, click: $parent.Paging.jump"></button>
+            <!-- /ko-->
+            <button class="btn" data-bind="click: Paging.next, enable: Paging.HasNext"><i class="icon-step-forward"></i></button>
+            <button class="btn" data-bind="click: Paging.goToLast, enable: Paging.HasNext"><i class="icon-fast-forward"></i></button>
+        </div>
+    </div>
+</div>
+<br />
+<!--</div>-->
+
+<!--    <div class="pagination"><ul>
+        <li data-bind="css: { disabled: !Paging.HasPrev() }"><a href="#" data-bind="click: Paging.prev">&laquo</a></li>
+        <li class="disabled"><a href="#" data-bind="text: Paging.Page"></a></li>
+        <li data-bind="css: { disabled: !Paging.HasNext() }"><a href="#" data-bind="    click: Paging.next">&raquo</a></li>
+    </ul></div>
+ -->

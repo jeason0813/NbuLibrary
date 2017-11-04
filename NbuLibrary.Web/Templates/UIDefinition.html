@@ -1,0 +1,16 @@
+﻿<!--ko if: Loaded-->
+<div>
+    <h3 data-bind="text: Name"></h3>
+    <div>
+        <button class="btn btn-primary" data-bind="click: $root.save"><i class="icon-hdd"> </i> Save</button>
+    </div>
+    <hr />
+    <div data-bind="foreach: Fields, attr: { id: '#acc' + Name() }, accordion: {collapse : true}" class="accordion">
+        <div data-bind="template: { name: $root.templateFor($data) }">
+
+        </div>
+    </div>
+    <button class="btn" data-bind="click: $root.add"><i class="icon-plus"> </i> Add</button>
+    <button class="btn" data-bind="click: $root.addRelation"><i class="icon-plus"> </i> Add Relation</button>
+</div>
+<!-- /ko -->

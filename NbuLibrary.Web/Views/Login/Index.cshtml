@@ -1,0 +1,43 @@
+﻿@model NbuLibrary.Web.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Sign In";
+    Layout = "_Login.cshtml";
+}
+
+<h3 class="form-signin-heading">Моля, въведете имейл и парола</h3>
+<form class="form-horizontal" method="post">
+    @Html.HiddenFor(model => model.ReturnUrl)
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputEmail">Имейл</label>
+        <div class="controls">
+            <input type="text" id="inputEmail" name="Email" placeholder="Email">
+            @Html.ActionLink("Регистрирай се", "Register")
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputPassword">Парола</label>
+        <div class="controls">
+            <input type="password" id="inputPassword" name="Password" placeholder="Password">
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            @Html.ActionLink("Забравена парола?", "ForgottenPassword")
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox">
+                @Html.CheckBoxFor(model => model.RememberMe)
+                Запомни ме
+            </label>
+            <button type="submit" class="btn">Вход</button>
+        </div>
+    </div>
+</form>
+
+

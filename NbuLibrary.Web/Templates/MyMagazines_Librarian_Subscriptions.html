@@ -1,0 +1,35 @@
+﻿<h3 data-bind="text: Title"></h3>
+<h4 data-bind="res: 'heading_mymagazines_subscriptions'"></h4>
+<!-- ko if: LoadedDef() && Loaded() -->
+
+<!-- ko if: Items().length -->
+<table class="table table-striped">
+    <thead>
+        <tr data-bind="template: { name: 'GridHeaders' }">
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-success" data-bind="disable: $root.isActive($data), click: $root.activate"><i class="  icon-plus-sign"></i>&nbsp;<span data-bind="    res: 'btn_activate'"></span></button>
+                    <button class="btn btn-danger" data-bind="enable: $root.isActive($data), click: $root.deactivate"><i class=" icon-minus-sign"></i>&nbsp;<span data-bind="    res: 'btn_deactivate'"></span></button>
+                </div>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+
+<!-- ko template: {name : 'GridPaging'} -->
+<!-- /ko -->
+
+<button class="btn btn-success" data-bind="click: addSubscription"><i class="icon-plus"></i>&nbsp;<span data-bind="    res: 'btn_add_subscription'"></span></button>
+
+<!-- /ko -->

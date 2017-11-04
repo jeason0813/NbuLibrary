@@ -1,0 +1,62 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Scripts/Datepicker/datepicker.css" rel="stylesheet" />
+    <link href="~/Scripts/Select/select2.css" rel="stylesheet" />
+    <script src="~/Scripts/lib/json2.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <a class="brand" href="#">
+                @*<img src="~/Content/images/Nbu%20Logo%20DarkGray.png" class="logo" />*@
+                NBU Library</a>
+
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <nav class="nav-collapse collapse">
+                <ul class="nav" role="navigation" data-bind="foreach: items">
+                    <li data-bind="css: { active : $root.Selected() === $data}"><a data-bind="text: Label, attr: {href : Url}" role="button"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <article data-bind="template : { name : template}">
+            </article>
+        </div>
+    </div>
+
+    @*TODO: Bundles*@
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/Scripts/MultipleSelect/bootstrap-multiselect.js"></script>
+    <script src="~/Scripts/Select/select2.min.js"></script>
+
+    @*<script src="~/Scripts/knockout-2.2.1.js"></script>*@
+    <script src="~/Scripts/knockout-2.2.1.debug.js"></script>
+    <script src="~/Scripts/koExternalTemplateEngine_all.min.js"></script>
+    <script src="~/Scripts/lib/Sammy/sammy-0.7.4.min.js"></script>
+    <script src="~/Scripts/lib/RequireJS/require.debug.js"></script>
+    <script src="~/Scripts/app/main.js"></script>
+</body>
+</html>

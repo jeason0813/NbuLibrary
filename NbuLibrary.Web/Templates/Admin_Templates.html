@@ -1,0 +1,14 @@
+﻿<h2 data-bind="res: 'templates_table_caption'"></h2>
+<!-- ko if: Loaded -->
+<table class="table">
+    <thead>
+    </thead>
+    <tbody data-bind="foreach: Templates">
+        <tr>
+            <td data-bind="text: Name"></td>
+            <td>
+                <button class="btn btn-primary" data-bind="click: $root.edit"><i class="icon-pencil"></i>&nbsp;<span data-bind="    res: 'btn_edit'"></span></button></td>
+        </tr>
+    </tbody>
+</table>
+<!-- /ko -->

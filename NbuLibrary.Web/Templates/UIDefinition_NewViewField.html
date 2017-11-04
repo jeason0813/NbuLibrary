@@ -1,0 +1,10 @@
+﻿<label>Property</label>
+<select data-bind="options: Properties, optionsText : 'Name', value : Selected, optionsCaption: 'Choose property'"> 
+</select>
+
+<!-- ko if: !!Selected() -->
+
+<select data-bind="options: ViewTypes, optionsText: 'Name', value: SelectedType, optionsCaption: 'Choose type'"> 
+</select>
+
+<!-- /ko -->

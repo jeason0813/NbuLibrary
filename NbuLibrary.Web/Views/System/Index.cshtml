@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutSystem.cshtml";
+}
+
+<h2>System</h2>
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    <label>Username</label>
+    <input type="text" name="Username" id="Username" />
+    <label>Password</label>
+    <input type="password" name="Password" id="Password" />
+    <div>
+        <button class="btn btn-primary">Authenticate</button>
+    </div>
+}

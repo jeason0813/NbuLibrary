@@ -1,0 +1,30 @@
+﻿<!-- ko if: LoadedDef() && Loaded() -->
+<div data-bind="template: {name : 'Filters', data : Filters}"></div>
+<!-- ko if: Items().length -->
+
+<h3 data-bind="text: Items()[0].RelationsData.Magazine_Issue().Entity.Data.Title"></h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr data-bind="template: { name: 'GridHeaders' }">
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr data-bind="css: { warning: !Data.Sent() }">
+            <td>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+
+<!-- ko template: {name : 'GridPaging'} -->
+<!-- /ko -->
+
+<!-- /ko -->

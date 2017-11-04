@@ -1,0 +1,43 @@
+﻿<script type="text/html" id="UserChangePassword">
+    <div>
+        <label>
+            New Password
+        </label>
+        <input type="password" data-bind="value:Entity.Password" />
+        <label>
+            Confirm Passowrd
+        </label>
+        <input type="password" data-bind="value:Entity.ConfirmPassword" />
+    </div>
+</script>
+
+<script type="text/html" id="UserGroupForm_Admin">
+    <form data-bind="validate: true">
+        <div data-bind="if: Loaded">
+            <div>
+                <label data-bind="text: Definition.Fields[0].Label"></label>
+                <div data-bind="editorFor: {Field: Definition.Fields[0], Item : Entity}"></div>
+            </div>
+            <div>
+                <label data-bind="text: Definition.Fields[1].Label"></label>
+                <div data-bind="editorFor: {Field: Definition.Fields[1], Item : Entity}"></div>
+            </div>
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr data-bind="foreach : Permissions">
+                            <th data-bind="text: ModuleName"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-bind="foreach : Permissions">
+                            <td>
+                                <input type="checkbox" class="checkbox" data-bind="checked: Active" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</script>

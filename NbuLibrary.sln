@@ -1,0 +1,268 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.Services", "NbuLibrary.Core.Services\NbuLibrary.Core.Services.csproj", "{D81E078D-3B43-4C20-8F40-C5610ACDD7B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.Domain", "NbuLibrary.Core.Domain\NbuLibrary.Core.Domain.csproj", "{16EE204E-AA25-4EEF-A85A-02856E27CBE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.Infrastructure", "NbuLibrary.Core.Infrastructure\NbuLibrary.Core.Infrastructure.csproj", "{3A6400D9-C924-4948-B42F-D04084CF73EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Test.EntityLogic", "NbuLibrary.Test.EntityLogic\NbuLibrary.Test.EntityLogic.csproj", "{5027E4C3-17A7-4D99-A089-E186502915AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.Kernel", "NbuLibrary.Core.Kernel\NbuLibrary.Core.Kernel.csproj", "{E75609C7-D415-4102-BBA7-B90F16A0A196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Web", "NbuLibrary.Web\NbuLibrary.Web.csproj", "{0085C1DB-5964-41DD-9DB1-1303E753B7BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.AccountModule", "NbuLibrary.Core.AccountModule\NbuLibrary.Core.AccountModule.csproj", "{5CCFB8CD-1007-4DDF-B95A-C386C7D9EA57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{CD51EB8F-3D03-4311-AB43-A39B342CB583}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.NomenclatureModule", "NbuLibrary.Core.NomenclatureModule\NbuLibrary.Core.NomenclatureModule.csproj", "{F1DED2E9-DD91-47F4-A194-DCA25F2BFB02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Modules.AskTheLib", "NbuLibrary.Modules.AskTheLib\NbuLibrary.Modules.AskTheLib.csproj", "{7878D534-08D2-47E5-BB26-51292751ACC7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deploy", "Deploy", "{03E7CFCE-C86E-4902-97D6-B394DD3F6CBD}"
+	ProjectSection(SolutionItems) = preProject
+		..\Start-up.docx = ..\Start-up.docx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{DEA082D6-4609-4EEE-A4F9-0CF27D62FEF1}"
+	ProjectSection(SolutionItems) = preProject
+		ClearSchema.sql = ClearSchema.sql
+		PrepareDatabase.sql = PrepareDatabase.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.Sql", "NbuLibrary.Core.Sql\NbuLibrary.Core.Sql.csproj", "{EAEB02EF-DFA1-4D58-BB00-2A1FA1B920F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.NotificationModule", "NbuLibrary.Core.NotificationModule\NbuLibrary.Core.NotificationModule.csproj", "{204252EA-B8BE-48A5-8609-30E5266BB491}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Modules.MyMagazines", "NbuLibrary.Modules.MyMagazines\NbuLibrary.Modules.MyMagazines.csproj", "{ABF1FE63-B192-4D24-9173-B4E9E1E77367}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.DataModel", "NbuLibrary.Core.DataModel\NbuLibrary.Core.DataModel.csproj", "{7359C86B-2C46-4523-842B-A4EFB35A4B73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.FilesModule", "NbuLibrary.Core.FilesModule\NbuLibrary.Core.FilesModule.csproj", "{DC74E73A-E59A-4F0B-AF29-46B1F8CCEF4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Modules.BiblRef", "NbuLibrary.Modules.BiblRef\NbuLibrary.Modules.BiblRef.csproj", "{C379E497-E1A8-4823-8E92-8CA146BD37D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.FinanceModule", "NbuLibrary.Core.FinanceModule\NbuLibrary.Core.FinanceModule.csproj", "{C020B7B6-33C3-46AE-9063-DABB788A4783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Modules.BiblList", "NbuLibrary.Modules.BiblList\NbuLibrary.Modules.BiblList.csproj", "{0419B695-1BF8-4C4B-95C5-DAA86DB14FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Modules.RefAnalysis", "NbuLibrary.Modules.RefAnalysis\NbuLibrary.Modules.RefAnalysis.csproj", "{762B01DE-E5BE-4894-A828-05ACAA28CD81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.HistoryModule", "NbuLibrary.Core.HistoryModule\NbuLibrary.Core.HistoryModule.csproj", "{3FCA80CB-0074-4D08-9141-72B2E7837EE6}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "NbuLibrary.Architecture", "NbuLibrary.Architecture\NbuLibrary.Architecture.modelproj", "{E58F2408-165E-472B-A69D-D9CD3A00BD78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Tests.Performance", "NbuLibrary.Tests.Performance\NbuLibrary.Tests.Performance.csproj", "{9D2F4A51-449A-447F-974A-B3477EA2A120}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E47E54D2-F118-4E09-9842-A8C38BEC3DCC}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		NbuLibrary.vsmdi = NbuLibrary.vsmdi
+		TestSettings1.testsettings = TestSettings1.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NbuLibrary.Core.Reporting", "NbuLibrary.Core.Reporting\NbuLibrary.Core.Reporting.csproj", "{BC48B2D8-6F5A-4596-BFF6-E38125CC0824}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 23
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs29
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = NbuLibrary.Core.Domain\\NbuLibrary.Core.Domain.csproj
+		SccProjectName1 = NbuLibrary.Core.Domain
+		SccLocalPath1 = NbuLibrary.Core.Domain
+		SccProjectUniqueName2 = NbuLibrary.Core.Infrastructure\\NbuLibrary.Core.Infrastructure.csproj
+		SccProjectName2 = NbuLibrary.Core.Infrastructure
+		SccLocalPath2 = NbuLibrary.Core.Infrastructure
+		SccProjectUniqueName3 = NbuLibrary.Test.EntityLogic\\NbuLibrary.Test.EntityLogic.csproj
+		SccProjectName3 = NbuLibrary.Test.EntityLogic
+		SccLocalPath3 = NbuLibrary.Test.EntityLogic
+		SccProjectUniqueName4 = NbuLibrary.Core.Kernel\\NbuLibrary.Core.Kernel.csproj
+		SccProjectName4 = NbuLibrary.Core.Kernel
+		SccLocalPath4 = NbuLibrary.Core.Kernel
+		SccProjectUniqueName5 = NbuLibrary.Web\\NbuLibrary.Web.csproj
+		SccProjectName5 = NbuLibrary.Web
+		SccLocalPath5 = NbuLibrary.Web
+		SccProjectUniqueName6 = NbuLibrary.Core.AccountModule\\NbuLibrary.Core.AccountModule.csproj
+		SccProjectTopLevelParentUniqueName6 = NbuLibrary.sln
+		SccProjectName6 = NbuLibrary.Core.AccountModule
+		SccLocalPath6 = NbuLibrary.Core.AccountModule
+		SccProjectUniqueName7 = NbuLibrary.Core.NomenclatureModule\\NbuLibrary.Core.NomenclatureModule.csproj
+		SccProjectTopLevelParentUniqueName7 = NbuLibrary.sln
+		SccProjectName7 = NbuLibrary.Core.NomenclatureModule
+		SccLocalPath7 = NbuLibrary.Core.NomenclatureModule
+		SccProjectUniqueName8 = NbuLibrary.Modules.AskTheLib\\NbuLibrary.Modules.AskTheLib.csproj
+		SccProjectTopLevelParentUniqueName8 = NbuLibrary.sln
+		SccProjectName8 = NbuLibrary.Modules.AskTheLib
+		SccLocalPath8 = NbuLibrary.Modules.AskTheLib
+		SccProjectUniqueName9 = NbuLibrary.Core.Sql\\NbuLibrary.Core.Sql.csproj
+		SccProjectName9 = NbuLibrary.Core.Sql
+		SccLocalPath9 = NbuLibrary.Core.Sql
+		SccProjectUniqueName10 = NbuLibrary.Core.NotificationModule\\NbuLibrary.Core.NotificationModule.csproj
+		SccProjectTopLevelParentUniqueName10 = NbuLibrary.sln
+		SccProjectName10 = NbuLibrary.Core.NotificationModule
+		SccLocalPath10 = NbuLibrary.Core.NotificationModule
+		SccProjectUniqueName11 = NbuLibrary.Modules.MyMagazines\\NbuLibrary.Modules.MyMagazines.csproj
+		SccProjectTopLevelParentUniqueName11 = NbuLibrary.sln
+		SccProjectName11 = NbuLibrary.Modules.MyMagazines
+		SccLocalPath11 = NbuLibrary.Modules.MyMagazines
+		SccProjectUniqueName12 = NbuLibrary.Core.DataModel\\NbuLibrary.Core.DataModel.csproj
+		SccProjectName12 = NbuLibrary.Core.DataModel
+		SccLocalPath12 = NbuLibrary.Core.DataModel
+		SccProjectUniqueName13 = NbuLibrary.Core.FilesModule\\NbuLibrary.Core.FilesModule.csproj
+		SccProjectTopLevelParentUniqueName13 = NbuLibrary.sln
+		SccProjectName13 = NbuLibrary.Core.FilesModule
+		SccLocalPath13 = NbuLibrary.Core.FilesModule
+		SccProjectUniqueName14 = NbuLibrary.Modules.BiblRef\\NbuLibrary.Modules.BiblRef.csproj
+		SccProjectTopLevelParentUniqueName14 = NbuLibrary.sln
+		SccProjectName14 = NbuLibrary.Modules.BiblRef
+		SccLocalPath14 = NbuLibrary.Modules.BiblRef
+		SccProjectUniqueName15 = NbuLibrary.Core.FinanceModule\\NbuLibrary.Core.FinanceModule.csproj
+		SccProjectTopLevelParentUniqueName15 = NbuLibrary.sln
+		SccProjectName15 = NbuLibrary.Core.FinanceModule
+		SccLocalPath15 = NbuLibrary.Core.FinanceModule
+		SccProjectUniqueName16 = NbuLibrary.Modules.BiblList\\NbuLibrary.Modules.BiblList.csproj
+		SccProjectTopLevelParentUniqueName16 = NbuLibrary.sln
+		SccProjectName16 = NbuLibrary.Modules.BiblList
+		SccLocalPath16 = NbuLibrary.Modules.BiblList
+		SccProjectUniqueName17 = NbuLibrary.Modules.RefAnalysis\\NbuLibrary.Modules.RefAnalysis.csproj
+		SccProjectTopLevelParentUniqueName17 = NbuLibrary.sln
+		SccProjectName17 = NbuLibrary.Modules.RefAnalysis
+		SccLocalPath17 = NbuLibrary.Modules.RefAnalysis
+		SccProjectUniqueName18 = NbuLibrary.Core.HistoryModule\\NbuLibrary.Core.HistoryModule.csproj
+		SccProjectTopLevelParentUniqueName18 = NbuLibrary.sln
+		SccProjectName18 = NbuLibrary.Core.HistoryModule
+		SccLocalPath18 = NbuLibrary.Core.HistoryModule
+		SccProjectUniqueName19 = NbuLibrary.Architecture\\NbuLibrary.Architecture.modelproj
+		SccProjectName19 = NbuLibrary.Architecture
+		SccLocalPath19 = NbuLibrary.Architecture
+		SccProjectUniqueName20 = NbuLibrary.Tests.Performance\\NbuLibrary.Tests.Performance.csproj
+		SccProjectName20 = NbuLibrary.Tests.Performance
+		SccLocalPath20 = NbuLibrary.Tests.Performance
+		SccProjectUniqueName21 = NbuLibrary.Core.Services\\NbuLibrary.Core.Services.csproj
+		SccProjectName21 = NbuLibrary.Core.Services
+		SccLocalPath21 = NbuLibrary.Core.Services
+		SccProjectUniqueName22 = NbuLibrary.Core.Reporting\\NbuLibrary.Core.Reporting.csproj
+		SccProjectName22 = NbuLibrary.Core.Reporting
+		SccLocalPath22 = NbuLibrary.Core.Reporting
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D81E078D-3B43-4C20-8F40-C5610ACDD7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D81E078D-3B43-4C20-8F40-C5610ACDD7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D81E078D-3B43-4C20-8F40-C5610ACDD7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D81E078D-3B43-4C20-8F40-C5610ACDD7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16EE204E-AA25-4EEF-A85A-02856E27CBE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16EE204E-AA25-4EEF-A85A-02856E27CBE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16EE204E-AA25-4EEF-A85A-02856E27CBE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16EE204E-AA25-4EEF-A85A-02856E27CBE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A6400D9-C924-4948-B42F-D04084CF73EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A6400D9-C924-4948-B42F-D04084CF73EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A6400D9-C924-4948-B42F-D04084CF73EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A6400D9-C924-4948-B42F-D04084CF73EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5027E4C3-17A7-4D99-A089-E186502915AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5027E4C3-17A7-4D99-A089-E186502915AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5027E4C3-17A7-4D99-A089-E186502915AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5027E4C3-17A7-4D99-A089-E186502915AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E75609C7-D415-4102-BBA7-B90F16A0A196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E75609C7-D415-4102-BBA7-B90F16A0A196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E75609C7-D415-4102-BBA7-B90F16A0A196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E75609C7-D415-4102-BBA7-B90F16A0A196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0085C1DB-5964-41DD-9DB1-1303E753B7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0085C1DB-5964-41DD-9DB1-1303E753B7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0085C1DB-5964-41DD-9DB1-1303E753B7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0085C1DB-5964-41DD-9DB1-1303E753B7BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CCFB8CD-1007-4DDF-B95A-C386C7D9EA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CCFB8CD-1007-4DDF-B95A-C386C7D9EA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CCFB8CD-1007-4DDF-B95A-C386C7D9EA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CCFB8CD-1007-4DDF-B95A-C386C7D9EA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1DED2E9-DD91-47F4-A194-DCA25F2BFB02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1DED2E9-DD91-47F4-A194-DCA25F2BFB02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1DED2E9-DD91-47F4-A194-DCA25F2BFB02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1DED2E9-DD91-47F4-A194-DCA25F2BFB02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7878D534-08D2-47E5-BB26-51292751ACC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7878D534-08D2-47E5-BB26-51292751ACC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7878D534-08D2-47E5-BB26-51292751ACC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7878D534-08D2-47E5-BB26-51292751ACC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAEB02EF-DFA1-4D58-BB00-2A1FA1B920F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAEB02EF-DFA1-4D58-BB00-2A1FA1B920F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAEB02EF-DFA1-4D58-BB00-2A1FA1B920F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAEB02EF-DFA1-4D58-BB00-2A1FA1B920F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{204252EA-B8BE-48A5-8609-30E5266BB491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{204252EA-B8BE-48A5-8609-30E5266BB491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{204252EA-B8BE-48A5-8609-30E5266BB491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{204252EA-B8BE-48A5-8609-30E5266BB491}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF1FE63-B192-4D24-9173-B4E9E1E77367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF1FE63-B192-4D24-9173-B4E9E1E77367}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF1FE63-B192-4D24-9173-B4E9E1E77367}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF1FE63-B192-4D24-9173-B4E9E1E77367}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7359C86B-2C46-4523-842B-A4EFB35A4B73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7359C86B-2C46-4523-842B-A4EFB35A4B73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7359C86B-2C46-4523-842B-A4EFB35A4B73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7359C86B-2C46-4523-842B-A4EFB35A4B73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC74E73A-E59A-4F0B-AF29-46B1F8CCEF4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC74E73A-E59A-4F0B-AF29-46B1F8CCEF4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC74E73A-E59A-4F0B-AF29-46B1F8CCEF4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC74E73A-E59A-4F0B-AF29-46B1F8CCEF4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C379E497-E1A8-4823-8E92-8CA146BD37D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C379E497-E1A8-4823-8E92-8CA146BD37D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C379E497-E1A8-4823-8E92-8CA146BD37D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C379E497-E1A8-4823-8E92-8CA146BD37D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C020B7B6-33C3-46AE-9063-DABB788A4783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C020B7B6-33C3-46AE-9063-DABB788A4783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C020B7B6-33C3-46AE-9063-DABB788A4783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C020B7B6-33C3-46AE-9063-DABB788A4783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0419B695-1BF8-4C4B-95C5-DAA86DB14FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0419B695-1BF8-4C4B-95C5-DAA86DB14FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0419B695-1BF8-4C4B-95C5-DAA86DB14FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0419B695-1BF8-4C4B-95C5-DAA86DB14FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{762B01DE-E5BE-4894-A828-05ACAA28CD81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762B01DE-E5BE-4894-A828-05ACAA28CD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762B01DE-E5BE-4894-A828-05ACAA28CD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762B01DE-E5BE-4894-A828-05ACAA28CD81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FCA80CB-0074-4D08-9141-72B2E7837EE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FCA80CB-0074-4D08-9141-72B2E7837EE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FCA80CB-0074-4D08-9141-72B2E7837EE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FCA80CB-0074-4D08-9141-72B2E7837EE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E58F2408-165E-472B-A69D-D9CD3A00BD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E58F2408-165E-472B-A69D-D9CD3A00BD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E58F2408-165E-472B-A69D-D9CD3A00BD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E58F2408-165E-472B-A69D-D9CD3A00BD78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2F4A51-449A-447F-974A-B3477EA2A120}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2F4A51-449A-447F-974A-B3477EA2A120}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2F4A51-449A-447F-974A-B3477EA2A120}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2F4A51-449A-447F-974A-B3477EA2A120}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC48B2D8-6F5A-4596-BFF6-E38125CC0824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC48B2D8-6F5A-4596-BFF6-E38125CC0824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC48B2D8-6F5A-4596-BFF6-E38125CC0824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC48B2D8-6F5A-4596-BFF6-E38125CC0824}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5CCFB8CD-1007-4DDF-B95A-C386C7D9EA57} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{F1DED2E9-DD91-47F4-A194-DCA25F2BFB02} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{7878D534-08D2-47E5-BB26-51292751ACC7} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{DEA082D6-4609-4EEE-A4F9-0CF27D62FEF1} = {03E7CFCE-C86E-4902-97D6-B394DD3F6CBD}
+		{204252EA-B8BE-48A5-8609-30E5266BB491} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{ABF1FE63-B192-4D24-9173-B4E9E1E77367} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{DC74E73A-E59A-4F0B-AF29-46B1F8CCEF4C} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{C379E497-E1A8-4823-8E92-8CA146BD37D3} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{C020B7B6-33C3-46AE-9063-DABB788A4783} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{0419B695-1BF8-4C4B-95C5-DAA86DB14FE4} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{762B01DE-E5BE-4894-A828-05ACAA28CD81} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+		{3FCA80CB-0074-4D08-9141-72B2E7837EE6} = {CD51EB8F-3D03-4311-AB43-A39B342CB583}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = NbuLibrary.vsmdi
+	EndGlobalSection
+EndGlobal

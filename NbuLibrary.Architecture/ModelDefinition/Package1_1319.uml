@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="adc02509-207e-4d97-ac86-4f165ddda341"
+  name="Core"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c9a95e44-f52b-47fe-85bb-aa0f28facd0a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DNbuLibrary.Core"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6ddb3fb9-a806-410a-8710-b8447940189e"
+        LastKnownName="DataModel"
+        LastKnownLocation="Package2_1319.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a2ee6870-c1e3-477f-abdb-0bd019152946"
+        LastKnownName="Domain"
+        LastKnownLocation="Package_0932.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2ef5c8c1-c599-4d2a-a0a9-8efaa59c5dab"
+        LastKnownName="Services"
+        LastKnownLocation="Package_0944.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0a42148c-1ee2-4ec5-af9e-b12a9a82f9b4"
+        LastKnownName="ModuleEngine"
+        LastKnownLocation="Package_0907.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="52bdd503-4641-4728-abe7-ad984e388fbe"
+        LastKnownName="Service"
+        LastKnownLocation="Package_0908.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

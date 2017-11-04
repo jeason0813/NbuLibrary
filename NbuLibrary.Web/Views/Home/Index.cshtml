@@ -1,0 +1,201 @@
+﻿@using SquishIt.Framework;
+@model NbuLibrary.Web.Controllers.InitialLoadModel
+
+@{
+    Layout = null;
+
+    var json = Newtonsoft.Json.JsonConvert.SerializeObject(Model.Mods);
+    var texts = Newtonsoft.Json.JsonConvert.SerializeObject(Model.UITexts);
+    var user = Newtonsoft.Json.JsonConvert.SerializeObject(Model.User);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link href="~/Scripts/Select/select2.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/Bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/BootstrapModal/css/bootstrap-modal.css" rel="stylesheet" />
+    <link href="~/Scripts/Datepicker/datepicker.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/FileUpload/css/jquery.fileupload-ui-noscript.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/FileUpload/css/jquery.fileupload-ui.css" rel="stylesheet" />
+    <link href="~/Content/fileicons.css" rel="stylesheet" />
+
+    @*    @Html.Raw(Bundle.Css()
+    .Add("/Scripts/Select/select2.css")
+    .Add("/Scripts/lib/Bootstrap/css/bootstrap.min.css")
+    .Add("/Scripts/lib/Bootstrap/css/bootstrap-responsive.min.css")
+    .Add("/Scripts/lib/BootstrapModal/css/bootstrap-modal.css")
+    .Add("/Scripts/Datepicker/datepicker.css")
+    .Add("/Scripts/lib/FileUpload/css/jquery.fileupload-ui-noscript.css")
+    .Add("/Scripts/lib/FileUpload/css/jquery.fileupload-ui.css")
+    .Add("/Content/fileicons.css")
+    .ForceRelease()
+    .Render("/Content/cssui_combined_#.css"))*@
+
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        var NbuLib = {
+            embed: {
+                mods : @Html.Raw(json),
+                texts: @Html.Raw(texts),
+                user: @Html.Raw(user)
+                }
+        };
+    </script>
+
+
+    @*TODO*@
+    <script type="text/html" id="AskTheLib_CustomerQuery">
+        <div class="hero-unit">
+            <form data-bind="validate: true">
+                <div data-bind="if : LoadedDef()">
+                    <div data-bind="foreach: Definition.Fields">
+                        <label data-bind="text: Label, attr : {'for' : Property}"></label>
+                        <div data-bind="editorFor : {Field : $data, Item : $root.Entity}"></div>
+                    </div>
+                </div>
+                <div>
+                    <a class="btn" data-bind="click: $root.cancel">Откажи</a>
+                    <button class="btn btn-primary" data-bind="vClick: $root.create">Изпрати</button>
+                </div>
+            </form>
+        </div>
+    </script>
+
+    @*TODO: Move FROM HERE!!!*@
+    <script type="text/html" id="NomenclatureGrid_Admin">
+        <h2 data-bind="text: NomenclatureName"></h2>
+        <div data-bind="template : {name : 'Grid'}"></div>
+    </script>
+
+    <script type="text/html" id="MainMenu">
+        <ul class="nav" role="navigation" data-bind="foreach : items">
+            <li class="dropdown">
+                <!-- ko if: hasSubmenu -->
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+                    <!-- ko if: Icon-->
+                    <i data-bind="attr: {class : Icon}"></i>
+                    <!-- /ko -->
+                    <span data-bind="text: Label"></span><b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" data-bind="foreach: items">
+                    <li><a href="#" data-bind="attr: {href : Url}">
+
+                        <!-- ko if: Icon-->
+                        <i data-bind="attr: {class : Icon}"></i>
+                        <!-- /ko -->
+
+                        <span data-bind="text: Label"></span>
+
+                    </a></li>
+                </ul>
+                <!-- /ko -->
+                <!-- ko if: ! hasSubmenu() -->
+                <a role="button" data-bind="attr: {href : Url}"><span data-bind="    text: Label"></span></a>
+                <!-- /ko -->
+            </li>
+        </ul>
+    </script>
+
+    @foreach (var templ in Model.Templates)
+    {
+        <script type="text/html" id="@templ.Name">
+            @Html.Raw(templ.Content)
+        </script>
+    }
+
+    <title>Index</title>
+</head>
+<body>
+    <div id="loader" style="text-align: center; display: none">
+        <div>Loading...</div>
+        <img src="~/Content/ajax-loader2.gif" />
+    </div>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#/">
+                <img src="~/Content/images/Nbu%20Logo%20DarkGray.png" class="logo" />
+                НБУ Библиотека <br />
+                <small style="color:#666">Система за електронни библиотечно-информационни услуги</small></a>
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <nav id="mainMenu" data-bind="template : { name : 'MainMenu'}" class="nav-collapse collapse">
+            </nav>
+        </div>
+    </div>
+    <article id="viewport" class="container" data-bind="template : {name : ko.isObservable(template) ?  template() : template }">
+    </article>
+    <div id="modalWindow" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="modalTitle">Modal header</h3>
+        </div>
+        <div class="modal-body">
+            <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+            <button class="cancel btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="save btn btn-primary">Save changes</button>
+        </div>
+    </div>
+
+    @*    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/lib/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/lib/BootstrapModal/js/bootstrap-modal.js"></script>
+    <script src="~/Scripts/lib/BootstrapModal/js/bootstrap-modalmanager.js"></script>
+    <script src="~/Scripts/lib/jQueryValidation/jquery.validate.min.js"></script>
+    <script src="~/Scripts/lib/jQueryValidation/additional-methods.min.js"></script>
+    <script src="~/Scripts/lib/jQueryValidation/localization/messages_bg.js"></script>
+    <script src="~/Scripts/noty/jquery.noty.js"></script>
+    <script src="~/Scripts/noty/layouts/topRight.js"></script>
+    <script src="~/Scripts/noty/themes/default.js"></script>
+    <script src="~/Scripts/knockout-2.3.0.debug.js"></script>
+    <script src="~/Scripts/Datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/Scripts/MultipleSelect/bootstrap-multiselect.js"></script>
+    <script src="~/Scripts/Select/select2.js"></script>
+    <script src="~/Scripts/lib/FileUpload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="~/Scripts/lib/FileUpload/js/jquery.iframe-transport.js"></script>
+    <script src="~/Scripts/lib/FileUpload/js/jquery.fileupload.js"></script>
+    <script src="~/Scripts/lib/Sammy/sammy-0.7.4.min.js"></script>
+    <script src="~/Scripts/lib/RequireJS/require.debug.js"></script>
+    <script src="~/Scripts/app/main.js"></script>*@
+    @{
+        var jsBundle = Bundle.JavaScript()
+    .Add("~/Scripts/jquery-1.9.1.min.js")
+    .Add("~/Scripts/lib/Bootstrap/js/bootstrap.min.js")
+    .Add("~/Scripts/lib/BootstrapModal/js/bootstrap-modal.js")
+    .Add("~/Scripts/lib/BootstrapModal/js/bootstrap-modalmanager.js")
+    .Add("~/Scripts/lib/jQueryValidation/jquery.validate.min.js")
+    .Add("~/Scripts/lib/jQueryValidation/additional-methods.min.js")
+    .Add("~/Scripts/lib/jQueryValidation/localization/messages_bg.js")
+    .Add("~/Scripts/noty/jquery.noty.js")
+    .Add("~/Scripts/noty/layouts/topRight.js")
+    .Add("~/Scripts/noty/themes/default.js")
+    .Add("~/Scripts/lib/ckeditor/ckeditor.js")
+    .Add("~/Scripts/lib/ckeditor/jquery.js")
+    .Add("~/Scripts/knockout-2.3.0.debug.js")
+    .Add("~/Scripts/Datepicker/bootstrap-datepicker.js")
+    .Add("~/Scripts/MultipleSelect/bootstrap-multiselect.js")
+    .Add("~/Scripts/Select/select2.js")
+    .Add("~/Scripts/lib/FileUpload/js/vendor/jquery.ui.widget.js")
+    .Add("~/Scripts/lib/FileUpload/js/jquery.iframe-transport.js")
+    .Add("~/Scripts/lib/FileUpload/js/jquery.fileupload.js")
+    .Add("~/Scripts/lib/Sammy/sammy-0.7.4.min.js")
+    .Add("~/Scripts/lib/RequireJS/require.debug.js")
+    .Add("~/Scripts/app/main.js");
+        
+            jsBundle.ForceDebug();
+        
+    }
+    
+    @Html.Raw(jsBundle.Render("~/Content/jsui_combined_#.js"))
+</body>
+</html>

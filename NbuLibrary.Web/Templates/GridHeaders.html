@@ -1,0 +1,4 @@
+﻿<th></th>
+<!-- ko foreach: $root.Definition().Fields -->
+<th data-bind="click: $root.sort"><span data-bind="    text: Label"></span><i data-bind="    visible: $root.Sorting.Field() === $data, css: { 'icon-arrow-up': $root.Sorting.Desc(), 'icon-arrow-down': !$root.Sorting.Desc() }"></i></th>
+<!-- /ko -->

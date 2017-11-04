@@ -1,0 +1,125 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" />
+    <link href="~/Scripts/Datepicker/datepicker.css" rel="stylesheet" />
+    <link href="~/Scripts/Select/select2.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/FileUpload/css/jquery.fileupload-ui-noscript.css" rel="stylesheet" />
+    <link href="~/Scripts/lib/FileUpload/css/jquery.fileupload-ui.css" rel="stylesheet" />
+    <link href="~/Content/fileicons.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/knockout-2.2.1.debug.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/lib/FileUpload/js/vendor/jquery.ui.widget.js"></script>
+    <script src="~/Scripts/lib/FileUpload/js/jquery.iframe-transport.js"></script>
+    <script src="~/Scripts/lib/FileUpload/js/jquery.fileupload.js"></script>
+    <script>
+        $(function () {
+
+            var vm = (function () {
+                var _files = ko.observableArray();
+
+                function getExt(filename) {
+                    var idx = filename.lastIndexOf('.');
+                    if (idx > 0)
+                        return filename.substring(idx + 1).toLowerCase();
+                    else
+                        return 'unknown';
+                }
+                return {
+                    files: _files,
+                    pendingUploads: ko.computed(function () {
+                        var pending = [];
+                        ko.utils.arrayForEach(_files(), function (file) {
+                            if (!file.Uploaded())
+                                pending.push(file);
+                        });
+                        return pending;
+                    }),
+                    add: function (name, size, contentType) {
+                        _files.push({ Name: name, Size: size, ContentType: contentType, Uploaded: ko.observable(false) });
+                    },
+                    iconFor: function (file) {
+                        switch (file.ContentType) {
+                            case 'image/png':
+                                return 'fileicon fileicon-png';
+                            case 'image/jpg':
+                            case 'image/jpeg':
+                                return 'fileicon fileicon-jpg';
+                            default:
+                                return 'fileicon fileicon-' + getExt(file.Name);
+                        }
+                    }
+                };
+            })();
+
+            $('#fileupload').fileupload({
+                dataType: 'json',
+                autoupload: false,
+                done: function (e, data) {
+                    console.log('done', data);
+                    $.each(data.result.files, function (index, file) {
+                        console.log('each', file);
+                    });
+                },
+                add: function (e, data) {
+                    var $s = $('.fileupload-summary');
+                    $(data.files).each(function () {
+                        vm.add(this.name, this.size, this.type);
+                    });
+                }
+            });
+
+            $('.fileupload').on('click', '.upload', function () {
+                $('#fileupload').fileupload('send');
+            });
+
+            ko.applyBindings(vm);
+        });
+    </script>
+    <title>Files</title>
+</head>
+<body>
+    <div class="container">
+        <h3>File upload</h3>
+        <div class="fileupload">
+            <div>
+                <span class="btn btn-success fileinput-button">
+                    <div class="icon-plus"></div>
+                    Add files...
+            <input id="fileupload" type="file" name="files[]" multiple="">
+                </span>
+                <button class="btn btn-primary upload" data-bind="enable: pendingUploads().length > 0">
+                    <i class="icon-upload"></i>&nbsp;Upload
+                </button>
+            </div>
+            <table style="margin-top: 1em;" class="table" data-bind="if: files().length > 0">
+                <thead>
+                    <tr>
+                        <th class="span1"></th>
+                        <th>File</th>
+                        <th class="span2">Size</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: files">
+                    <tr data-bind="css: { warning: !Uploaded() }">
+                        <td>
+                            <div data-bind="attr: { class: $root.iconFor($data) }"></div>
+                        </td>
+                        <td data-bind="text: Name"></td>
+                        <td><span data-bind="text: Math.floor(Size / 1024)"></span> KB</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

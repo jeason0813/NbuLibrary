@@ -1,0 +1,33 @@
+﻿<select data-bind="options: Relations, optionsText: 'Name', value: Selected, optionsCaption:'Choose relation'">
+</select>
+<div data-bind="if: !!Selected()">
+
+    <select data-bind="options: FieldTypes, optionsText: 'Name', value: SelectedType">
+    </select>
+
+</div>
+
+<div data-bind="if: !!SelectedType()">
+    <label>Label</label>
+    <input type="text" data-bind="value : Result.Label" />
+    <label>Formula</label>
+    <input type="text" data-bind="value : Result.Formula" />
+    <div style="border: 1px solid gray;">
+        <div href="#" data-target="#formulahints" style="border-bottom: 1px solid gray">
+            Options:
+        </div>
+        <div id="formulahints">
+            <div data-bind="foreach: RelProperties">
+                <div>{<span data-bind="text: Name"></span>}</div>
+            </div>
+        </div>
+    </div>
+    <label>Order</label>
+    <input type="text" data-bind="value : Result.Order" />
+
+    <label>Multiple</label>
+    <input type="checkbox" data-bind="checked : Result.Multiple" disabled="disabled" />
+
+    <label>Required</label>
+    <input type="checkbox" data-bind="checked : Result.Required" />
+</div>

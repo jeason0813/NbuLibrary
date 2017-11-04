@@ -1,0 +1,39 @@
+﻿<select data-bind="options: Relations, optionsText: 'Name', value: Selected, optionsCaption:'Choose relation'">
+</select>
+<div data-bind="if: !!Selected()">
+
+    <select data-bind="options: Selected().Fields, optionsText: 'Name', value: SelectedField">
+    </select>
+
+</div>
+
+<div data-bind="if: !!SelectedField()">
+
+    <select data-bind="options: FieldTypes, optionsText: 'Name', value: SelectedType">
+    </select>
+
+</div>
+
+<div data-bind="if: !!SelectedType()">
+    <label>Label</label>
+    <input type="text" data-bind="value : Result.Label" />
+    <label>Order</label>
+    <input type="text" data-bind="value : Result.Order" />
+
+    <!-- ko if: SelectedType().Value == 0 -->
+    @*Textfield*@
+            <label>Length</label>
+    <input type="text" data-bind="value : Result.Length" />
+    <label>Multiline</label>
+    <input type="checkbox" data-bind="checked : Result.Multiline" />
+    <!-- /ko -->
+
+    <!-- ko if: SelectedType().Value == 3 -->
+    @*Textfield*@
+            <label>Enum</label>
+    <!-- /ko -->
+
+    @*<span data-bind="text: Result.Property"></span>
+    <span data-bind="text: Result.Label"></span>
+    <span data-bind="text: Result.Type"></span>*@
+</div>

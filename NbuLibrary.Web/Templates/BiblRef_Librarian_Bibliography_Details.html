@@ -1,0 +1,15 @@
+﻿<div data-bind="if: LoadedDef() && Loaded()">
+    <div data-bind="foreach: Definition().Fields">
+        <dl data-bind="if: !(Entity == 'Language' && Role == 'Keywords')">
+            <dt data-bind="text: Label"></dt>
+            <dd data-bind="viewText: { Field: $data, Item: $parent.Entity }"></dd>
+        </dl>
+    </div>
+    <h4 data-bind="res: 'biblref_keywords_list_title'"></h4>
+    <div data-bind="foreach: Entity.RelationsData.Language_Keywords">
+        <dl>
+            <dt data-bind="text: Entity.Data.Value"></dt>
+            <dd data-bind="text: Data.Keywords"></dd>
+        </dl>
+    </div>
+</div>

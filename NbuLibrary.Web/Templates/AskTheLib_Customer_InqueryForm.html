@@ -1,0 +1,7 @@
+﻿<h3 data-bind="res: 'heading_askthelib_inquery'"></h3>
+
+<div data-bind="template: { name: 'GeneralForm' }"></div>
+
+<button class="btn" data-bind="res: 'btn_cancel', click: cancel"></button>
+<button class="btn btn-primary" data-bind="res: Id() ? 'btn_save' : 'btn_create_query', click: save, enable: IsDirty"></button>
+

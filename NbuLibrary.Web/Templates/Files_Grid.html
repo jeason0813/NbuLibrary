@@ -1,0 +1,45 @@
+﻿<!-- ko if: LoadedDef() && Loaded() -->
+
+<div data-bind="template: { name: 'Filters', data: Filters }"></div>
+
+<!-- ko if: Items().length -->
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <td></td>
+            <!-- ko template: { name: 'GridHeaders' } -->
+            <!-- /ko -->
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr>
+            <td>
+                <div class="btn-group">
+                    <a class="btn" data-bind="attr: { href: '#/filedownload/' + Id() }"><i class="icon-download"></i>&nbsp;<span data-bind="    res: 'btn_download'"></span></a>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a data-bind="attr: { href: '#/file/' + Id() }"><i class="icon-list-alt"></i>&nbsp;<span data-bind="    res: 'btn_open'"></span></a></li>
+                        <li><a data-bind="click: $root.remove"><i class="icon-trash"></i>&nbsp;<span data-bind="    res: 'btn_remove'"></span></a></li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div data-bind="attr: { class: ko.fileiconFor(Data.Name() + Data.Extension()) }"></div>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+<!-- ko template: {name : 'GridPaging'} -->
+<!-- /ko -->
+
+
+<!-- /ko -->

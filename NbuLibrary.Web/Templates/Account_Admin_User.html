@@ -1,0 +1,11 @@
+﻿<div style="border-radius:5px; border:1px solid #666; padding:1em;">
+    <h3><span data-bind="res: 'heading_user'"></span> <a style="font-size:12px" href="#" data-bind="    click: edit, visible: !EditMode()">| <span data-bind="res: 'btn_edit'"></span></a></h3>
+    <div data-bind="template: { name: EditMode() ? 'GeneralForm' : 'GeneralDetails' }"></div>
+
+    <!-- ko if: Loaded -->
+    <div data-bind="visible: EditMode()">
+        <button class="btn" data-bind="res: 'btn_cancel', click: cancel"></button>
+        <button class="btn btn-primary" data-bind="res: 'btn_save', click: save, enable : IsDirty"></button>
+    </div>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Scripts/Datepicker/datepicker.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @*    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" />*@
+    @*<script src="~/Scripts/jquery-1.8.3.min.js"></script>*@
+    @*<script src="~/Scripts/jquery-1.8.3.js"></script>*@
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript"></script>
+
+    <script src="~/Scripts/Validation/jquery.validate.js"></script>
+    <script src="~/Scripts/Validation/additional-methods.min.js"></script>
+
+    <script src="~/Scripts/noty/jquery.noty.js"></script>
+    <script src="~/Scripts/noty/layouts/bottom.js"></script>
+    <script src="~/Scripts/noty/themes/default.js"></script>
+
+    @*<script src="~/Scripts/knockout-2.2.0.debug.js"></script>*@
+    <script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-2.2.1.js"></script>
+    <script src="~/Scripts/knockout.plugin.js"></script>
+    <script src="~/Scripts/Core/Common.js"></script>
+
+    <script src="~/Scripts/Core/EntityVM.js"></script>
+    <script src="~/Scripts/Core/ListVM.js"></script>
+
+    <script src="~/Scripts/Core/Client.js"></script>
+
+    <script type="text/html" id="GeneralDetails">
+        <div data-bind="if: LoadedDef">
+            <div data-bind="foreach: Definition.Fields">
+                <div class="muted" data-bind="text: Label"></div>
+                <div class="data-field" data-bind="viewText: {Field : $data, Item : $root.Entity}"></div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="GeneralForm">
+        <div data-bind="if : LoadedDef() && Loaded()">
+            <form data-bind="validate: true">
+                <div data-bind="foreach: Definition.Fields">
+                    <label data-bind="text: Label, attr : {for : Property}"></label>
+                    <div data-bind="editorFor : {Field : $data, Item : $root.Entity}"></div>
+                </div>
+            </form>
+        </div>
+    </script>
+
+    <script type="text/html" id="AskTheLib_CustomerQuery">
+        <div class="hero-unit">
+            <form data-bind="validate: true">
+                <div data-bind="if : LoadedDef()">
+                    <div data-bind="foreach: Definition.Fields">
+                        <label data-bind="text: Label, attr : {'for' : Property}"></label>
+                        <div data-bind="editorFor : {Field : $data, Item : $root.Entity}"></div>
+                    </div>
+                </div>
+                <div>
+                    <a class="btn" data-bind="click: $root.cancel">Откажи</a>
+                    <button class="btn btn-primary" data-bind="vClick: $root.create">Изпрати</button>
+                </div>
+            </form>
+        </div>
+    </script>
+
+    <script type="text/html" id="Grid">
+        <!-- ko if: LoadedDef() &&  $root.Definition.Filters && $root.Definition.Filters.length -->
+        <a href="#" type="button" data-toggle="collapse" data-target=".filter-wrapper">Filters
+        </a>
+        <div class="collapse filter-wrapper">
+            <div data-bind="if: $root.Definition.Filters != null" class="filters">
+                <table>
+                    <tbody>
+                        <!-- ko foreach: $root.Definition.Filters -->
+                        <tr>
+                            <td class="filter-label" data-bind="text: Label"></td>
+                            <td data-bind="filterFor : {Field : $data}"></td>
+                        </tr>
+                        <!-- /ko -->
+                        <tr>
+                            <td></td>
+                            <td><a class="btn" href="#" data-bind="click:$root.applyFilters">Apply</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /ko -->
+
+        <!-- ko if: LoadedDef() && Loaded() -->
+
+        <!-- ko if: Items().length -->
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <!-- ko foreach: $root.Definition.Fields -->
+                    <!-- ko if:  $root.sortBy -->
+                    <th data-bind="click: $root.sortBy"><span data-bind="text: Label"></span><i data-bind="css : {'icon-arrow-up' : $root.getSortBy($data) === true, 'icon-arrow-down' : $root.getSortBy($data) === false }"></i></th>
+                    <!-- /ko -->
+                    <!-- ko if:  !$root.sortBy -->
+                    <th data-bind="text: Label"></th>
+                    <!-- /ko -->
+                    <!-- /ko -->
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: Items">
+                <tr>
+                    <td data-bind="if: $root.DefaultAction || $root.Actions.length">
+                        <div class="btn-group">
+                            <!-- ko if: $root.DefaultAction -->
+                            <button class="btn" data-bind="actionFor:{action : $root.DefaultAction, item : $data}">Action</button>
+                            <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                <span class="caret"></span>
+                            </button>
+                            <!-- /ko -->
+                            <!-- ko if: !$root.DefaultAction -->
+                            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">Action <span class="caret"></span>
+                            </a>
+                            <!-- /ko -->
+                            <ul class="dropdown-menu" data-bind="foreach: $root.Actions">
+                                <li><a href="#" data-bind="actionFor:{action : $data, item : $parent}"></a></li>
+                            </ul>
+                        </div>
+                    </td>
+                    <!-- ko foreach: $root.Definition.Fields -->
+                    <td data-bind="viewText: {Field : $data, Item : $parent}"></td>
+                    <!-- /ko -->
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- /ko -->
+        <!-- ko if: Items().length === 0 -->
+        <h3>No data.</h3>
+        <!-- /ko -->
+        <div data-bind="foreach: $root.GlobalActions">
+            <a class="btn" href="#" data-bind="actionFor:{action : $data}"></a>
+        </div>
+
+        <!-- /ko -->
+
+    </script>
+
+    <script type="text/html" id="GenericMessage">
+        <div class="alert alert-success">
+            <b data-bind="text: Title"></b>
+            <span data-bind="text: Message"></span>
+        </div>
+    </script>
+
+    @*TODO: Move FROM HERE!!!*@
+    <script type="text/html" id="NomenclatureGrid_Admin">
+        <h2 data-bind="text: NomenclatureName"></h2>
+        <div data-bind="template : {name : 'Grid'}"></div>
+    </script>
+
+
+    @*@foreach (var script in Model.Scripts)
+    {
+        <script type="text/javascript">
+            @Html.Raw(script)
+        </script>
+    }*@
+
+    <script type="text/javascript" src="/Home/Scripts"></script>
+
+    <script type="text/html" id="MainMenu">
+        <ul class="nav" role="navigation" data-bind="foreach : MenuItems()">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button"><span data-bind="text: Name, click: Click"></span><b data-bind="visible: HasSubmenu()" class="caret"></b></a>
+                <!-- ko if: HasSubmenu() -->
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" data-bind="foreach: MenuItems">
+                    <li><a href="#" data-bind="text: Name, click: Click"></a></li>
+                </ul>
+                <!-- /ko -->
+            </li>
+        </ul>
+    </script>
+
+    @{Html.RenderAction("Templates", "Home");}
+
+    @*@foreach (var templ in Model.Templates)
+    {
+        @Html.Raw(templ)
+    }*@
+
+    <title>Index</title>
+</head>
+<body>
+    <div id="loader" style="text-align: center">
+        <div>Loading...</div>
+        <img src="~/Content/ajax-loader2.gif" />
+    </div>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">
+                <img src="~/Content/images/Nbu%20Logo%20DarkGray.png" class="logo" />
+                NBU Library</a>
+            <div id="mainMenu" data-bind="template : { name : 'MainMenu'}">
+            </div>
+        </div>
+    </div>
+    <div id="viewport" class="container">
+
+        @RenderBody()
+
+    </div>
+    <div id="modalWindow" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="modalTitle">Modal header</h3>
+        </div>
+        <div class="modal-body">
+            <p>One fine body…</p>
+        </div>
+        <div class="modal-footer">
+            <button class="cancel btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            <button class="save btn btn-primary">Save changes</button>
+        </div>
+    </div>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @*Third party js*@
+
+    <script src="~/Scripts/Datepicker/bootstrap-datepicker.js"></script>
+    <script src="~/Scripts/MultipleSelect/bootstrap-multiselect.js"></script>
+</body>
+</html>

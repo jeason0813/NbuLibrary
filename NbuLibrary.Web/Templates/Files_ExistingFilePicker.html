@@ -1,0 +1,20 @@
+﻿<!-- ko if: Loaded -->
+<div data-bind="template: { name: 'Filters', data: Filters }">
+</div>
+<!-- ko if: Files().length -->
+<div data-bind="foreach: Files" class="row" style="margin-top: 1em;">
+    <div class="span2 alert" data-bind="css: { 'alert-success': $data === $root.Selected() }, click: $root.Selected">
+        <div data-bind="attr: { class: ko.fileiconFor(Data.Name + Data.Extension) }"></div>
+        <span data-bind="text: Data.Name"></span>
+    </div>
+</div>
+<!-- /ko -->
+<!-- ko if: Files().length === 0 -->
+<h3 data-bind="res: 'msg_no_data'"></h3>
+<!-- /ko -->
+<div class="btn-group">
+    <button class="btn" data-bind="click: Paging.prev, enable: Paging.HasPrev, attr: { disable: !Paging.HasPrev() }"><i class="icon-backward"></i></button>
+    <button disabled class="btn" data-bind="text: Paging.Page"></button>
+    <button class="btn" data-bind="click: Paging.next, enable: Paging.HasNext"><i class="icon-forward"></i></button>
+</div>
+<!-- /ko -->

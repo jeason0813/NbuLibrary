@@ -1,0 +1,23 @@
+﻿<div data-bind="if: LoadedDef() && Loaded()">
+    <form data-bind="validate: true">
+        <div data-bind="foreach: Definition().Fields">
+            <!-- ko if: $data != $root.KeywordsField() -->
+            <label data-bind="text: Label, attr: { for: Property }"></label>
+            <div data-bind="editorFor: { Field: $data, Item: $root.Entity }"></div>
+            <!-- /ko -->
+            <!-- ko if: $data == $root.KeywordsField() -->
+            <label data-bind="text: Label, attr: { for: Property + Entity + Role }"></label>
+            <div data-bind="selectlist: { entity: Entity, multiple: Multiple, formula: Formula, value: $root.Entity.RelationsData.Language_Keywords(), changeHandler: $root.onChangeLanguage, id: Property + Entity + Role, name: Property + Entity + Role, required: true }"></div>
+            <h4 data-bind="if: $root.Keywords().length, res: 'lbl_biblref_keywords'"></h4>
+            <div data-bind="foreach: $root.Keywords">
+                <label data-bind="text: Language, attr: { id: 'Keywords_' + Id }"></label>
+                <textarea data-bind="value: Keywords, attr: { name: 'Keywords_' + Id, id: 'Keywords_' + Id }" class="input-xlarge"></textarea>
+            </div>
+            <!-- /ko -->
+        </div>
+    </form>
+</div>
+
+<!-- ko if: NoAccess -->
+<div class="alert">The page does not exists or you don't have permissions to open it.</div>
+<!-- /ko -->

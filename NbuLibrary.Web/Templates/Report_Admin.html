@@ -1,0 +1,29 @@
+﻿<h2>Reports</h2>
+<!-- ko if: Loaded -->
+<!-- ko foreach: Services -->
+<div>
+    <h4>
+        <span data-bind="text: Label, css:{'grey': !Exists()}"></span>
+        <!-- ko if: !Exists() -->
+        <a class="btn btn-link" data-bind="click: $parent.createFolder">Create Folder</a>
+        <!-- /ko -->
+        <!-- ko if: Exists() -->
+        <a class="btn btn-link" data-bind="click: $parent.uploadReport">Upload report</a>
+        <!-- /ko -->
+    </h4>
+    <!-- ko if: Exists -->
+    <table class="table">
+        <tr data-bind="if: !Reports().length">
+            <td colspan="2" data-bind="">No reports.</td>
+        </tr>
+        <!-- ko foreach: Reports -->
+        <tr>
+            <td><a data-bind="attr:{href: Url}"><span class="icon-list-alt"></span>&nbsp;<span data-bind="text: Name"></span></a></td>
+            <td style="text-align:right;"><a data-bind="click: $root.remove" class="btn btn-danger"><span class="icon-trash"></span>&nbsp;<span data-bind="res: 'btn_remove'"></span></a></td>
+        </tr>
+        <!-- /ko -->
+    </table>
+    <!-- /ko -->
+</div>
+<!-- /ko -->
+<!-- /ko -->

@@ -1,0 +1,17 @@
+﻿<label>Relation</label>
+<select data-bind="options: Relations, optionsText: 'Name', value: SelectedRelation, optionsCaption: 'Choose relation'"> 
+</select>
+
+
+<!-- ko if: !!SelectedRelation() -->
+<label>Property</label>
+<select data-bind="options: Properties, optionsText : 'Name', value : SelectedProperty, optionsCaption: 'Choose property'"> 
+</select>
+<!-- /ko -->
+
+<!-- ko if: !!SelectedProperty() -->
+<label>Control</label>
+<select data-bind="options: ViewTypes, optionsText: 'Name', value: SelectedType, optionsCaption: 'Choose type'"> 
+</select>
+
+<!-- /ko -->

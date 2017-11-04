@@ -1,0 +1,53 @@
+﻿<h3 data-bind="res: 'heading_biblref_queries'"></h3>
+
+<!-- ko if: LoadedDef() && Loaded() -->
+
+<div data-bind="template: {name : 'Filters', data : Filters}"></div>
+
+<!-- ko if: Items().length -->
+<table class="table table-striped">
+    <thead>
+        <tr data-bind="template: { name: 'GridHeaders' }">
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr>
+            <td>
+                <div class="btn-group">
+                    <a class="btn" data-bind="attr: { href: '#/biblref/queries/' + Id() }"><i class="icon-list-alt"></i> <span data-bind="    res: 'btn_open'"></span></a>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <!-- ko if: Data.Status() == 0 -->
+                        <li><a data-bind="click: $root.editQuery"><i class="icon-edit"></i> <span data-bind="    res: 'btn-edit-query'"></span></a></li>
+                        <!-- ko if: Data.ForNew() -->
+                        <li><a data-bind="click: $root.editBibliography"><i class="icon-edit"></i> <span data-bind="    res: 'btn-edit-bibliography'"></span></a></li>
+                        <!-- /ko -->
+                        <!-- /ko -->
+                        <li><a data-bind="attr: { href: '#/notif/related/BibliographicQuery/Notification/' + Id() }"><i class="icon-envelope"></i> <span data-bind="    res: 'btn_view_notifications'"></span></a></li>
+                        <!-- ko if: $root.canEdit($data) -->
+                        <li><a data-bind="click: $root.cancel"><i class="icon-off"></i> <span data-bind="    res: 'btn_cancel'"></span></a></li>
+                        <!-- /ko -->
+                        <!-- ko if: $root.IsLibrarian -->
+                        <li><a data-bind="click: $root.process"><i class="icon-retweet"></i>&nbsp;<span data-bind="    res: 'btn_process'"></span></a></li>
+                        <li><a data-bind="click: $root.editPayment"><i class=" icon-shopping-cart"></i>&nbsp;<span data-bind="    res: 'btn_payment'"></span></a></li>
+                        <!-- /ko -->
+                    </ul>
+                </div>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+
+<!-- ko template: {name : 'GridPaging'} -->
+<!-- /ko -->
+<a class="btn" href="#/biblref/query" data-bind="res: 'btn_create_query'"></a>
+<!-- /ko -->

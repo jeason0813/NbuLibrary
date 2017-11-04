@@ -1,0 +1,40 @@
+﻿<h3 data-bind="res: 'heading_account_pendingusers'"></h3>
+
+<!-- ko if: LoadedDef() && Loaded() -->
+
+<div data-bind="template: { name: 'Filters', data: Filters }"></div>
+
+<!-- ko if: Items().length -->
+<table class="table table-striped">
+    <thead>
+        <tr data-bind="template: {name : 'GridHeaders'}">
+
+        </tr>
+    </thead>
+    <tbody data-bind="foreach: Items">
+        <tr>
+            <td>
+                <div class="btn-group">
+                    <a class="btn" data-bind="click: $root.approve"><i class="icon-ok"> </i> <span data-bind="res: 'btn_approve_user'"></span></a>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a data-bind="attr: { href: '#/account/users/' + Id() }"><i class="icon-list-alt"> </i> <span data-bind="res: 'btn_open'"></span></a></li>
+                        <li><a data-bind="click: $root.reject"><i class="icon-remove"> </i> <span data-bind="res: 'btn_reject_user'"></span></a></li>
+                    </ul>
+                </div>
+            </td>
+            <!-- ko template: {name : 'GridRow'} -->
+            <!-- /ko -->
+        </tr>
+    </tbody>
+</table>
+
+<!-- /ko -->
+<!-- ko if: Items().length === 0 -->
+<h3>No data.</h3>
+<!-- /ko -->
+<!-- ko template: {name : 'GridPaging'} -->
+<!-- /ko -->
+<!-- /ko -->
